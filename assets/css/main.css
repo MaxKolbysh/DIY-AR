@@ -62,7 +62,7 @@
 	model-viewer {
 	  width: 100%;
 	  height: 500px;
-	  background-color: #70BCD1;
+	  background-color: #4374b9;
 	}
 
 	model-viewer#reveal {
@@ -4367,3 +4367,122 @@
 
 		}
 
+/* DIY style */
+
+		.gyproc-header{
+
+			text-transform: uppercase;
+			
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+
+
+		}
+		.gyproc-header h2{
+
+			color:#f6713f;
+			font-weight: bold;
+
+		}
+		.gyproc-header h3{
+
+			color:#f6713f;
+			
+
+		}
+
+		.gyproc-header div{
+			margin-left: 5%;
+		}
+
+		.gyproc-img-logo{
+
+			
+			width: 10%;
+
+
+		}
+
+		.picture-gyproc-text{
+			color: #f6713f;
+			text-transform: uppercase;
+
+		}
+
+		.picture-gyproc-box{
+			width: 5%;
+		}
+
+		.gyproc-benifits{
+			color: #4374b9;
+			display:flex;
+			justify-content: space-around;
+			align-items: 
+
+			flex-direction: row;
+			flex-wrap: wrap;
+			
+		}
+
+		.gyproc-benifits h3, strong{
+			color: #4374b9;
+			
+			
+		}
+
+
+
+		.gyproc-bullet{
+			display: flex;
+			
+			flex-direction: row;
+			align-items: center;
+			
+
+			margin: 16px 0px;
+		}
+
+		.gyproc-bullet-img{
+			width: 64px;
+			height: 64px;
+			margin: 16px;
+
+			
+
+		}
+
+		.gyproc-bullet-feature{
+			flex:1;
+			min-height: 170px;
+		}
+
+		@media  screen and (max-width: 650px){
+
+			.gyproc-header{
+
+			
+			
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: flex-end;
+			
+
+
+		}
+
+			.gyproc-img-logo{
+
+			
+			width: 20%;
+
+			margin-right: 60px;
+
+
+		}
+
+
+		}
