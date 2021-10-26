@@ -4408,7 +4408,8 @@
 
 		.picture-gyproc-text{
 			color: #f6713f;
-			text-transform: uppercase;
+			margin-right: auto;
+			margin-left: auto; 
 
 		}
 
@@ -4419,11 +4420,12 @@
 		.gyproc-benifits{
 			color: #4374b9;
 			display:flex;
-			justify-content: space-around;
+			justify-content: space-between;
 			align-items: 
 
 			flex-direction: row;
 			flex-wrap: wrap;
+			margin: 0 5%;
 			
 		}
 
