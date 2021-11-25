@@ -50,7 +50,7 @@
 	}
 
 	#card {
-	  margin: 3em auto;
+	  margin: 2em auto;
 	  display: flex;
 	  flex-direction: column;
 	  max-width: 800px;
@@ -4402,12 +4402,33 @@
 
 
 		}
+
+		.nordfox-header{
+			text-transform: uppercase;
+			
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+			flex-wrap: wrap;
+
+		}
+
 		.gyproc-header h2{
 
 			color:#444;
 			font-weight: bold;
 
 		}
+
+
+		 .nordfox-header h2{
+		 	color:#4374B9;
+
+			font-weight: bold;
+
+
+		 }
 		.gyproc-header h3{
 
 			color:#f6713f;
@@ -4415,9 +4436,21 @@
 
 		}
 
+		 .nordfox-header h3{
+
+		 	color:#D24A43; 
+
+		 }
+
 		.gyproc-header div{
 			margin-left: 5%;
 		}
+
+		.nordfox-header div{
+			flex-basis: 800px; 
+		}
+
+
 
 		.gyproc-img-logo{
 
@@ -4425,6 +4458,15 @@
 			width: 10%;
 
 
+		}
+
+		.hub-img-logo{
+			
+
+		}
+
+		.Nordfox-img-logo{
+			
 		}
 
 		.picture-gyproc-text{
@@ -4536,6 +4578,42 @@
 
 		}
 
+			.nordfox-header{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				margin-left: 1em;
+
+			}
+
+
+			.nordfox-header div {
+    		flex-basis: 350px;
+
+
+			}
+
+			.nordfox-header h2{
+				font-size: 1.5rem;
+			}
+
+			.nordfox-header h3{
+				font-size: 1.1rem;
+			}
+
+
+			.hub-img-logo{
+				width: 60%;
+				margin-bottom: 1em; 
+
+			}
+
+			.Nordfox-img-logo{
+				width: 60%;
+				margin-top: 1em; 
+			}
+
 			.gyproc-img-logo{
 
 			
@@ -4545,6 +4623,7 @@
 
 
 		}
+
 
 
 
