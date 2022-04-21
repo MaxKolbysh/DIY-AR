@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>test WebGL</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" href="images/favicon_color.png" type="image/png">
+	    
+	    
+	    <!-- The following libraries and polyfills are recommended to maximize browser support -->
+	    <!-- NOTE: you must adjust the paths as appropriate for your project -->
+	    
+	    	    <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+	    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+
+	    <!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+	    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+
+	    <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+	    <script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
+
+	    <!-- 💁 OPTIONAL: Fullscreen polyfill is needed to fully support AR features -->
+	    <script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>
+
+	    <!-- 💁 OPTIONAL: Include prismatic.js for Magic Leap support -->
+	    <script src="https://unpkg.com/@magicleap/prismatic/prismatic.min.js"></script>
+	    
+	    <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+	    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+	    <!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-38E6070C8J"></script>
+		
+	</head>
+	<body class="subpage-nordfox">
+
+		
+								
+								<header class="nordfox-header">
+									<a href="https://hub.saint-gobain.ru/" target="_blank">
+										<img class="hub-img-logo" src="images/Group 2.png">
+									</a>	
+										
+									
+									<div>	
+										<h2>SGR test </h2>
+										<h3>html annotations</h3>
+									</div>
+									
+								</header>
+								<div id="card">
+								    
+									
+									<!-- pol.plav.vl.plitka.b (Max К) -->
+									
+									<model-viewer bounds="tight" enable-pan src="/models/Saint-Gobain-Florian (1).glb (1).glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1" autoplay>
+										<button class="Hotspot" slot="hotspot-1" data-position="-17.30918407613825m 1.6868364978482449m -4.238281536146868m" data-normal="-0.7540910549090071m 0m 0.6567698842868946m" data-visibility-attribute="visible">
+											<div class="HotspotAnnotation">Test hotspot for sensor</div>
+										</button>
+										<div class="progress-bar hide" slot="progress-bar">
+											<div class="update-bar"></div>
+										</div>
+										<button slot="ar-button" id="ar-button">
+											View in your space
+										</button>
+										<div id="ar-prompt">
+											<img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+										</div>
+									</model-viewer>
+
+									
+
+									
+									
+
+								<span class = "picture-gyproc-text">Ar mode enable</span>
+
+								    
+								</div>
+								
+
+
+					</div>
+				</div>
+			</section>
+
+		
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<!-- 💁 Include both scripts below to support all browsers! -->
+
+		
+		    <!-- Loads <model-viewer> for modern browsers: -->
+			<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+
+			<!-- Loads <model-viewer> for old browsers like IE11: -->
+			<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+	</body>
+</html>
