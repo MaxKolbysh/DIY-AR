@@ -1,5 +1,10 @@
 
-										function selected(){
+										
+                                        
+                                        
+                                    const viewer = document.getElementById('#modelblock') as ModelViewerElement;
+                                    
+                                    function selected(){
 												// Add active class to the current button (highlight it)
 									let header = document.getElementById("modelblock");
 									let hotspots = header.getElementsByClassName("hotspot");
@@ -29,8 +34,8 @@
 										alert("Put in text first to add hotspots.");
 									}else{
 										   
-										  const viewer = document.querySelector('#modelblock');
-										const rect = viewer.getBoundingClientRect();
+									
+									const rect = viewer.getBoundingClientRect();
 									
 									const x = event.clientX - rect.left;
 									const y = event.clientY - rect.top;
