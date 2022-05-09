@@ -2,7 +2,7 @@
 										
                                         
                                         
-                                    const viewer = document.getElementById('#modelblock') as ModelViewerElement;
+                                    const viewer = document.getElementById('#modelblock') 
                                     
                                     function selected(){
 												// Add active class to the current button (highlight it)
