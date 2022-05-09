@@ -1,8 +1,9 @@
 
 										
                                         
-                                        
-                                    
+                                    import {ModelViewerElement} from '@google/model-viewer';  
+                                       
+                                    const viewer = document.getElementById('#modelblock') as ModelViewerElement;
                                     
                                     function selected(){
 												// Add active class to the current button (highlight it)
@@ -34,7 +35,7 @@
 										alert("Put in text first to add hotspots.");
 									}else{
 										   
-									const viewer = document.querySelector('#modelblock');
+									
 									const rect = viewer.getBoundingClientRect();
 									
 									const x = event.clientX - rect.left;
