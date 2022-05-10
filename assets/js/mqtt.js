@@ -13,7 +13,7 @@ function MQTTconnect() {
     if (typeof path == "undefined") {
         path = '/mqtt';
     }
-    mqtt = new Paho.MQTT.Client(host, port, path, "mqtt_panel" + parseInt(Math.random() * 100, 10));
+    mqtt = new Paho.MQTT.Client(host, port, path, "mqtt_panel2" + parseInt(Math.random() * 100, 10));
     let options = {
         timeout: 3,
         useSSL: useTLS,
