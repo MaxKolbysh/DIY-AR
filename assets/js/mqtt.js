@@ -13,7 +13,7 @@ function MQTTconnect() {
     if (typeof path == "undefined") {
         path = '/mqtt';
     }
-    mqtt = new Paho.MQTT.Client(host, port, path, "mqtt_panel2" + parseInt(Math.random() * 100, 10));
+    mqtt = new Paho.MQTT.Client(host, port, path, "mqtt_panel" + parseInt(Math.random() * 100, 10));
     let options = {
         timeout: 3,
         useSSL: useTLS,
@@ -57,7 +57,8 @@ function onMessageArrived(message) {
 	$('#mqtt-value-label').text(payload + ' °C');
     
 	$('#mqtt-value-label').addClass('badge-default');
-    $('#mqttdata').html('Temp is: ' +payload + ' °C')
+    $('#mqttdata').html('Temp is: ' +payload + ' °C');
+    $('#mqttdata-value').html(topic).val(payload + ' °C');
 
 	tempData.push({
 		"timestamp": Date().slice(16, 21),
@@ -100,6 +101,6 @@ function drawChart(data) {
 }
 
 $(document).ready(function () {
-   drawChart(tempData); 
+  /* drawChart(tempData); */ 
     MQTTconnect();
 });

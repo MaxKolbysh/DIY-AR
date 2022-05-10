@@ -94,10 +94,11 @@
 										<div id="controls" class="dim">
 											<label for="src">Sensors:</label>
 											<select id="src">
-											  <option value="">Data1</option>
+											  <option value="test" id="mqttdata-value">Loading...</option>
 											  <option value="">Data2</option>
 											  <option value="">Data3</option>
 											</select><br>
+											
 											<form onSubmit="return false;">
 											
 												<input type="text" id="hotspottext" name="hotspottext" placeholder="Input sensor name">
@@ -121,7 +122,7 @@
 									
 									
 
-								<span class = "picture-gyproc-text" id = "mqttdata">Ar mode disabele</span>
+								
 
 								    
 								</div>
@@ -134,36 +135,43 @@
 									<div class="modal-dialog modal-dialog-centered" role="document">
 									<div class="modal-content" >
 										<div class="modal-header">
-										<h5 class="modal-title" id="exampleModalLongTitle">Data flow</h5>
+										<h5 class="modal-title" id="exampleModalLongTitle">Status</h5>
 										
 											
-										</button>
-										</div>
-										<div class="modal-body">
-										    <div class="container-fluid" style="max-height: 90%;">
-												<div id="status" class="alert">
-													<small>Loading...</small>
-												</div>
-												<div class="row">
-													<div class="col">
-														<div class="card">
-															<div class="card-body">
-																<div class="card-title">
-																	<div id="mqtt-topic">topic</div>
-																	
-																	<span id="mqtt-value-label" class="text-muted float-right badge">Unknown</span>
-																	
-																</div>
+										<div class="container-fluid">
+											<div id="status" class="alert">
+												<small>Loading...</small>
+											</div>
+											<div class="row">
+												<div class="col">
+													<div class="card">
+														<div class="card-body">
+															<div class="card-title">
+																<div id="mqtt-topic">topic</div>
+																
+																<p>Sensor value:<span id="mqtt-value-label" class="text-muted float-right badge">Unknown</span></p>
+																
+																
 															</div>
-															<canvas id="chart" ></canvas>
-															
 														</div>
+														
+														
 													</div>
 												</div>
-												<hr>
 											</div>
+											
+										</div>
+
+										</div>
+										<div class="modal-body">
+											<form onSubmit="return false;">
+											
+												<input type="text" id="hotspottext" name="hotspottext" placeholder="Input sensor name">
+											</form>
+
 										</div>
 										<div class="modal-footer">
+										<button type="button" class="btn btn-danger">Delete sensor</button>	
 										
 										<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 										</div>
