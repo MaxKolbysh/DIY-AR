@@ -25,7 +25,7 @@
 											
 									
 										//hotspot counter so we can keep track of how many we added on 3 because we already have hotspot-0 and hotspot-1 (set to 0 if you start with 0 hotspots)
-										let hotspotCounter = 0;
+										let hotspotCounter = 1;
 										function addHotspot(MouseEvent) {
 											let inputtext = document.querySelector('input').value;
 									
