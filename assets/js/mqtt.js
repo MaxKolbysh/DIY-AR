@@ -68,7 +68,7 @@ function onMessageArrived(message) {
 	}
 	drawChart(tempData);
  };
-/*
+
 function drawChart(data) {
     let ctx = document.getElementById("chart").getContext("2d");
 
@@ -98,8 +98,8 @@ function drawChart(data) {
         }
     });
 }
-*/
+
 $(document).ready(function () {
-   /* drawChart(tempData); */
+   drawChart(tempData); 
     MQTTconnect();
 });

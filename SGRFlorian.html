@@ -11,6 +11,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 
+		<!--Some modal css-->
+	
+
 		<link rel="shortcut icon" href="images/favicon_color.png" type="image/png">
 	    
 	    
@@ -38,7 +41,14 @@
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-38E6070C8J"></script>
 
 		
-		
+		<!--Bootstrap-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<!--Modal script-->
+		<script type="text/javascript" src="assets/js/modal.js"></script>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		
 		<!-- Mqttp-->
     
@@ -46,6 +56,9 @@
     	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.js"></script>
 		<script type="text/javascript" src="assets/js/mqtt.js"></script>
+
+		
+		
 		
 	</head>
 	<body class="subpage-nordfox">
@@ -72,7 +85,7 @@
 									
 									<model-viewer ondblclick="addHotspot()" onclick="selected()" id="modelblock" bounds="tight"    src="models/Florianmodel.glb" ar ar-modes="webxr scene-viewer quick-look fallback" ar-scale="auto" magic-leap camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1" autoplay>
 										
-										<button slot="hotspot-0" class="hotspot" data-position="0.632316109306938m 2.6945175945999047m -4.403817695134522m" data-normal="0.011698304789011342m 0m 0.9999315724913699m"><div class="annotation"  id="mqttdata">
+										<button data-toggle="modal" data-target="#exampleModalCenter"    slot="hotspot-0" class="hotspot" data-position="0.632316109306938m 2.6945175945999047m -4.403817695134522m" data-normal="0.011698304789011342m 0m 0.9999315724913699m"><div class="annotation"  id="mqttdata">
 											Temp loading...</div></button>
 										<div id="controls" class="dim">
 											<label for="src">Sensors:</label>
@@ -108,6 +121,52 @@
 
 								    
 								</div>
+								<!-- Modal window-->
+								<!-- Button trigger modal -->
+								
+								
+								<!-- Modal -->
+								<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered" role="document">
+									<div class="modal-content" >
+										<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLongTitle">Data flow</h5>
+										
+											
+										</button>
+										</div>
+										<div class="modal-body">
+										    <div class="container-fluid" style="max-height: 90%;">
+												<div id="status" class="alert">
+													<small>Loading...</small>
+												</div>
+												<div class="row">
+													<div class="col">
+														<div class="card">
+															<div class="card-body">
+																<div class="card-title">
+																	<div id="mqtt-topic">topic</div>
+																	
+																	<span id="mqtt-value-label" class="text-muted float-right badge">Unknown</span>
+																	
+																</div>
+															</div>
+															<canvas id="chart" ></canvas>
+															
+														</div>
+													</div>
+												</div>
+												<hr>
+											</div>
+										</div>
+										<div class="modal-footer">
+										
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+										</div>
+									</div>
+									</div>
+								</div>
+								
 								
 
 
