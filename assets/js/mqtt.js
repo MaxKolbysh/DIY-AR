@@ -58,8 +58,9 @@ function onMessageArrived(message) {
     
 	$('#mqtt-value-label').addClass('badge-default');
     $('#mqttdata').html('Temp is: ' +payload + ' °C');
-    $('#mqttdata-value').html(topic).val(payload + ' °C');
-
+    $('#mqttdata-value').html(topic);
+    $('#mqttdata-value').val(payload + ' °C');
+    
 	tempData.push({
 		"timestamp": Date().slice(16, 21),
 		"temperature": parseInt(payload)
