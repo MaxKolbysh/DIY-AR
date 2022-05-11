@@ -24,10 +24,10 @@
 									
 											
 									
-										//hotspot counter so we can keep track of how many we added on 3 because we already have hotspot-0 and hotspot-1 (set to 0 if you start with 0 hotspots)
+										//hotspot counter so we can keep track of how many we added on 1 because we already have hotspot-0 and hotspot-1 (set to 0 if you start with 0 hotspots)
 										let hotspotCounter = 1;
 										function addHotspot(MouseEvent) {
-											let inputtext = document.querySelector('select').html;
+											let inputtext = document.querySelector("option:checked").dataset.sensorValue;
 									
 											// if input = nothing then alert error if it isnt then add the hotspot
 											if (inputtext == ""){
@@ -53,6 +53,7 @@
 									hotspot.slot = `hotspot-${hotspotCounter ++}`;
 									hotspot.classList.add('hotspot');
 									hotspot.id = `hotspot-${hotspotCounter}`;
+									
 									hotspot.dataset.position = position.toString();
 									if (normal != null) {
 									hotspot.dataset.normal = normal.toString();

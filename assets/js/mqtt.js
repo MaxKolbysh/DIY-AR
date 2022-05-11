@@ -18,7 +18,7 @@ function MQTTconnect() {
     if (typeof path == "undefined") {
         path = '/mqtt';
     }
-    mqtt = new Paho.MQTT.Client(host, port, path, "mqtt_panel" + parseInt(Math.random() * 100, 10));
+    mqtt = new Paho.MQTT.Client(host, port, path, "mqtt_panel4" + parseInt(Math.random() * 100, 10));
     let options = {
         timeout: 3,
         useSSL: useTLS,
@@ -62,10 +62,15 @@ function onMessageArrived(message) {
 	$('#mqtt-value-label').text(payload + ' °C');
     
 	$('#mqtt-value-label').addClass('badge-default');
-    $('#mqttdata').html('Temp is: ' +payload + ' °C');
     
-    $('#mqttdata-value').html("Topic: " + topic+" Value: "+payload + ' °C');
-
+    $('#mqttdata').html('Temp is: ' +payload + ' °C');
+    $('#mqttdatadinamic').html('Temp is: ' +payload + ' °C');
+    
+    $('[data-sensor="sensor1"]').html(topic).attr('data-sensor-value', (payload + ' °C'));
+    $('[data-sensor="sensor2"]').html(topic+" n2").attr('data-sensor-value', (payload + ' F'));; // F - for different data simulation
+    $('[data-sensor="sensor3"]').html(topic+" n3").attr('data-sensor-value', (payload  +' K'));;  // K - for different data simulation
+    
+    
 	tempData.push({
 		"timestamp": Date().slice(16, 21),
 		"temperature": parseInt(payload)
