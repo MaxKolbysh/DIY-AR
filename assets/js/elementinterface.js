@@ -13,9 +13,9 @@
 									  hotspots[i].addEventListener("click", function() {
 									 let current = document.getElementsByClassName("selected");
 									  if (current.length > 0) { 
-										current[0].className = current[0].className.replace(" selected", "");
+										current[0].className = current[0].className.replace("-selected", "");
 									  }
-									  this.className += " selected";
+									  this.className += "-selected";
 									  });
 									}
 									
@@ -89,14 +89,16 @@
 
 
 
-									function removeHotspot(){
-										let el = document.getElementsByClassName("hotspot selected");
+									function removeDiv(){
 										
+										let el =document.querySelector(".hotspot-selected");
+										
+
 										if (el == null){
 											alert("No hotspots to delete");
 										}else{
 											hotspotCounter --;
-											el.remove()}; // 
+									el.remove()}; // Removes the selected hotspot
 									}
 
 
