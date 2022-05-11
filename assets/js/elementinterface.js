@@ -32,7 +32,7 @@
 									
 											// if input = nothing then alert error if it isnt then add the hotspot
 											if (inputtext == ""){
-										alert("Put in text first to add hotspots.");
+										alert("Choose sensor firs, to add on model.");
 									}else{
 										   
 									const viewer = document.querySelector('#modelblock');
@@ -54,9 +54,10 @@
 									hotspot.slot = `hotspot-${hotspotCounter ++}`;
 									hotspot.classList.add('hotspot');
 									hotspot.id = `hotspot-${hotspotCounter}`;
-									hotspot.dataset.toggle ="modal"
+									hotspot.dataset.toggle ="modal"						// modal window now sstatic , but foe update
 									hotspot.dataset.target ="#exampleModalCenter" 
 									hotspot.dataset.position = position.toString();
+									hotspot.dataset.sensor = "sensor1"
 									if (normal != null) {
 									hotspot.dataset.normal = normal.toString();
 									}
