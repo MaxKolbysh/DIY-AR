@@ -96,7 +96,7 @@
 											alert("No hotspots to delete");
 										}else{
 											hotspotCounter --;
-											viewer.removeChild(el)}; // Removes the last added hotspot
+											el.remove()}; // 
 									}
 
 
