@@ -2,12 +2,12 @@
 										
                                         
                                         
-                                    
+                                    const viewer = document.getElementById("modelblock");
                                     
                                     function selected(){
 												// Add active class to the current button (highlight it)
-									let header = document.getElementById("modelblock");
-									let hotspots = header.getElementsByClassName("hotspot");
+									
+									let hotspots = viewer.getElementsByClassName("hotspot");
 									for (let i = 0; i < hotspots.length; i++) {
 									  hotspots[i].addEventListener("click", function() {
 									 let current = document.getElementsByClassName("selected");
@@ -27,7 +27,7 @@
 										//hotspot counter so we can keep track of how many we added on 3 because we already have hotspot-0 and hotspot-1 (set to 0 if you start with 0 hotspots)
 										let hotspotCounter = 1;
 										function addHotspot(MouseEvent) {
-											let inputtext = document.querySelector('select').value;
+											let inputtext = document.querySelector('select').html;
 									
 											// if input = nothing then alert error if it isnt then add the hotspot
 											if (inputtext == ""){
@@ -82,4 +82,6 @@
 											hotspotCounter --;
 									el.remove()}; // Removes the last added hotspot
 									}
+
+
 									
