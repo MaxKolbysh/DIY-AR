@@ -3,6 +3,7 @@
                                         
                                         
                                     const viewer = document.getElementById("modelblock");
+									
                                     
                                     function selected(){
 												// Add active class to the current button (highlight it)
@@ -53,7 +54,8 @@
 									hotspot.slot = `hotspot-${hotspotCounter ++}`;
 									hotspot.classList.add('hotspot');
 									hotspot.id = `hotspot-${hotspotCounter}`;
-									
+									hotspot.dataset.toggle ="modal"
+									hotspot.dataset.target ="#exampleModalCenter" 
 									hotspot.dataset.position = position.toString();
 									if (normal != null) {
 									hotspot.dataset.normal = normal.toString();
