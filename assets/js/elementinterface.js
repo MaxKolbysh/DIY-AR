@@ -57,7 +57,7 @@
 									hotspot.dataset.toggle ="modal"						// modal window now sstatic , but foe update
 									hotspot.dataset.target ="#exampleModalCenter" 
 									hotspot.dataset.position = position.toString();
-									hotspot.dataset.sensor = "sensor1"
+									
 									if (normal != null) {
 									hotspot.dataset.normal = normal.toString();
 									}
