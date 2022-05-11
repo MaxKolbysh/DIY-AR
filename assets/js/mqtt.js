@@ -9,6 +9,11 @@ let reconnectTimeout = 3000;
 let tempData = new Array();
 let mqtt;
 
+
+
+
+
+
 function MQTTconnect() {
     if (typeof path == "undefined") {
         path = '/mqtt';
@@ -58,9 +63,9 @@ function onMessageArrived(message) {
     
 	$('#mqtt-value-label').addClass('badge-default');
     $('#mqttdata').html('Temp is: ' +payload + ' °C');
-    $('#mqttdata-value').html(topic);
-    $('#mqttdata-value').val(payload + ' °C');
     
+    $('#mqttdata-value').html("Topic: " + topic+" Value: "+payload + ' °C');
+
 	tempData.push({
 		"timestamp": Date().slice(16, 21),
 		"temperature": parseInt(payload)
