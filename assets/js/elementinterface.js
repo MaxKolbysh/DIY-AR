@@ -95,9 +95,9 @@
 										
 
 										if (el == null){
-											alert("No hotspots to delete");
+											alert("No hotspots to delete 2");
 										}else{
-											hotspotCounter --;
+											
 									el.remove()}; // Removes the selected hotspot
 									}
 
