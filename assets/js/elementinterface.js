@@ -77,7 +77,7 @@
 									
 									
 									
-										function removeHotspot(){
+										function removeHotspotlast(){
 										let el = document.getElementById(`hotspot-${hotspotCounter}`);
 										
 										if (el == null){
@@ -85,6 +85,18 @@
 										}else{
 											hotspotCounter --;
 									el.remove()}; // Removes the last added hotspot
+									}
+
+
+
+									function removeHotspot(){
+										let el = document.getElementsByClassName("hotspot selected");
+										
+										if (el == null){
+											alert("No hotspots to delete");
+										}else{
+											hotspotCounter --;
+											viewer.removeChild(el)}; // Removes the last added hotspot
 									}
 
 

@@ -104,7 +104,7 @@
 											
 												<input type="text" id="hotspottext" name="hotspottext" placeholder="Input sensor name">
 											</form>	
-											<div class="center"><button class="btn" onclick="removeHotspot()">Remove last Data</button></div>
+											<div class="center"><button class="btn" onclick="removeHotspotlast()">Remove last Data</button></div>
 											
 										  </div>
 										<div class="progress-bar hide" slot="progress-bar">
@@ -172,7 +172,7 @@
 
 										</div>
 										<div class="modal-footer">
-										<button type="button" class="btn btn-danger">Delete sensor</button>	
+										<button type="button" class="btn btn-danger" onclick="removeHotspot()">Delete sensor</button>	
 										
 										<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 										</div>
