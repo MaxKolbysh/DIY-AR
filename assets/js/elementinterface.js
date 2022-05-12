@@ -67,8 +67,8 @@
 									hotspot.slot = `hotspot-${hotspotCounter ++}`;
 									hotspot.classList.add('hotspot');
 									hotspot.id = `hotspot-${hotspotCounter}`;
-									//hotspot.dataset.toggle ="modal"						// modal window now sstatic , but foe update
-									//hotspot.dataset.target ="#exampleModalCenter" 
+									hotspot.dataset.toggle ="modal"						// modal window now sstatic , but foe update
+									hotspot.dataset.target ="#exampleModalCenter" 
 									hotspot.dataset.position = position.toString();
 									
 									if (normal != null) {
