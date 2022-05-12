@@ -3,21 +3,26 @@
                                         
                                         
                                     const viewer = document.getElementById("modelblock");
-
+									let hotspots = viewer.getElementsByClassName("hotspot");
 
 									
                                     
+
+									
                                     function selected(){
 												// Add active class to the current button (highlight it)
 									
-									let hotspots = viewer.getElementsByClassName("hotspot");
+									
+									console.log("open function")
 									for (let i = 0; i < hotspots.length; i++) {
 									  hotspots[i].addEventListener("click", function() {
 									 let current = document.getElementsByClassName("selected");
 									  if (current.length > 0) { 
 										current[0].className = current[0].className.replace(" selected", "");
+										console.log("next function unselected")
 									  }
 									  this.className += " selected";
+									  console.log("next function selected");
 									  });
 									}
 									

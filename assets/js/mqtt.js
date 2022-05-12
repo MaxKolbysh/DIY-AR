@@ -70,7 +70,9 @@ function onMessageArrived(message) {
     $('[data-sensor="sensor2"]').html(topic+" n2").attr('data-sensorValue', (payload + ' F')); // F - for different data simulation
     $('[data-sensor="sensor3"]').html(topic+" n3").attr('data-sensorValue', (payload  +' K'));  // K - for different data simulation
     
-    
+    $('[data-sensorValue="value1"]').html(payload + ' °C');
+    $('[data-sensorValue="value2"]').html(payload + ' °F');
+    $('[data-sensorValue="value3"]').html(payload + ' °K');
     
 	tempData.push({
 		"timestamp": Date().slice(16, 21),
