@@ -71,8 +71,8 @@ function onMessageArrived(message) {
     $('[data-sensor="sensor3"]').html(topic+" n3").attr('data-sensorValue', (payload  +' K'));  // K - for different data simulation
     
     $('[data-sensorval="sensor1"]').html(payload + ' °C');
-
-    
+    $('[data-sensorval="sensor2"]').html(payload + ' F');
+    $('[data-sensorval="sensor3"]').html(payload + ' K');
 	tempData.push({
 		"timestamp": Date().slice(16, 21),
 		"temperature": parseInt(payload)
