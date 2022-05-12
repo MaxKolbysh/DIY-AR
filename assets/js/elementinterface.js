@@ -3,6 +3,8 @@
                                         
                                         
                                     const viewer = document.getElementById("modelblock");
+
+
 									
                                     
                                     function selected(){
@@ -39,7 +41,7 @@
 											
 									
 										//hotspot counter so we can keep track of how many we added on 1 because we already have hotspot-0 and hotspot-1 (set to 0 if you start with 0 hotspots)
-										let hotspotCounter = 1;
+										let hotspotCounter = 0;
 										function addHotspot(MouseEvent) {
 											let inputtext = document.querySelector("option:checked").dataset.sensorvalue;
 									
