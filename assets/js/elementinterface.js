@@ -20,6 +20,19 @@
 									}
 									
 										}
+
+										function removeDiv(){
+										
+											let el =document.querySelector('[class="hotspot selected"]');
+											
+	
+											if (el == null){
+												alert("No hotspots to delete 2");
+											}else{
+												hotspotCounter --;
+										el.remove()}; // Removes the selected hotspot
+										}
+		
 									
 									
 									
@@ -54,8 +67,8 @@
 									hotspot.slot = `hotspot-${hotspotCounter ++}`;
 									hotspot.classList.add('hotspot');
 									hotspot.id = `hotspot-${hotspotCounter}`;
-									hotspot.dataset.toggle ="modal"						// modal window now sstatic , but foe update
-									hotspot.dataset.target ="#exampleModalCenter" 
+									//hotspot.dataset.toggle ="modal"						// modal window now sstatic , but foe update
+									//hotspot.dataset.target ="#exampleModalCenter" 
 									hotspot.dataset.position = position.toString();
 									
 									if (normal != null) {
