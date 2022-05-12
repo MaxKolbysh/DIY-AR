@@ -46,10 +46,12 @@
 											
 									
 										//hotspot counter so we can keep track of how many we added on 1 because we already have hotspot-0 and hotspot-1 (set to 0 if you start with 0 hotspots)
-										let hotspotCounter = 0;
+										let hotspotCounter = 1;
 										function addHotspot(MouseEvent) {
 											let inputtext = document.querySelector("option:checked").dataset.sensorvalue;
-									
+											
+
+
 											// if input = nothing then alert error if it isnt then add the hotspot
 											if (inputtext == ""){
 										alert("Choose sensor firs, to add on model.");
@@ -76,7 +78,7 @@
 									hotspot.id = `hotspot-${hotspotCounter}`;
 									hotspot.dataset.toggle ="modal"						// modal window now sstatic , but foe update
 									hotspot.dataset.target ="#exampleModalCenter" 
-									hotspot.dataset.sensor = document.querySelector("option:checked").dataset.sensor;
+									hotspot.dataset.sensorv.add(document.querySelector("option:checked").dataset.sensor);
 									hotspot.dataset.position = position.toString();
 									
 									if (normal != null) {
