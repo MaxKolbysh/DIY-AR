@@ -12,7 +12,7 @@
 									
 									let hotspots = viewer.getElementsByClassName("hotspot");
 									for (let i = 0; i < hotspots.length; i++) {
-									  hotspots[i].addEventListener("contextmenu", function() {
+									  hotspots[i].addEventListener("click", function() {
 									 let current = document.getElementsByClassName("selected");
 									  if (current.length > 0) { 
 										current[0].className = current[0].className.replace(" selected", "");
@@ -23,7 +23,7 @@
 									
 										}
 
-										function removeDiv(){
+										function removeHotspot(){
 										
 											let el =document.querySelector('[class="hotspot selected"]');
 											
@@ -104,17 +104,7 @@
 
 
 
-									function removeDiv(){
-										
-										let el =document.querySelector('[class="hotspot selected"]');
-										
-
-										if (el == null){
-											alert("No hotspots to delete 2");
-										}else{
-											hotspotCounter --;
-									el.remove()}; // Removes the selected hotspot
-									}
+									
 
 
 									
