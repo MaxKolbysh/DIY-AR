@@ -78,7 +78,7 @@
 									hotspot.id = `hotspot-${hotspotCounter}`;
 									hotspot.dataset.toggle ="modal"						// modal window now sstatic , but foe update
 									hotspot.dataset.target ="#exampleModalCenter" 
-									hotspot.dataset.sensorv=document.querySelector("option:checked").dataset.sensor;
+									hotspot.dataset.sensorval=document.querySelector("option:checked").dataset.sensor;
 									hotspot.dataset.position = position.toString();
 									
 									if (normal != null) {
