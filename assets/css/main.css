@@ -78,7 +78,7 @@
 	z-index:+22;
 	opacity: 0.85;
 	
-    --min-hotspot-opacity: 0;
+    
   }
 
   .show{
@@ -186,6 +186,15 @@
     border-radius: 10px;
     padding: 10px;
   }
+  #element-name{
+    background-color: #888888;
+    position: absolute;
+    transform: translate(10px, 40px);
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+
   /* This keeps child nodes hidden while the element loads */
   :not(:defined) > * {
     display: none;

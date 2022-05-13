@@ -93,10 +93,17 @@
 									viewer.appendChild(hotspot);
 									console.log('mouse = ', x, ', ', y, positionAndNormal);
 									
+									
+
+									let elementDataContainer = document.createElement("div");
+							
+									elementDataContainer.id= `elementdatacontainer-${hotspotCounter}`;
+									document.getElementById(`hotspot-${hotspotCounter}`).appendChild(elementDataContainer);
+									
 									let elementName = document.createElement("div");
 									elementName.classList.add('element-name');
 									elementName.appendChild(document.createTextNode(newsensorname));
-									document.getElementById(`hotspot-${hotspotCounter}`).appendChild(elementName);
+									document.getElementById(`elementdatacontainer-${hotspotCounter}`).appendChild(elementName);
 
 
 									// adds the text with value to last hotspot
@@ -105,9 +112,11 @@
 									element.dataset.sensorval=document.querySelector("option:checked").dataset.sensor;
 								
 									element.appendChild(document.createTextNode(inputtext));
-									document.getElementById(`hotspot-${hotspotCounter}`).appendChild(element);
+									document.getElementById(`elementdatacontainer-${hotspotCounter}`).appendChild(element);
 									
 									document.querySelector('input').value = "";
+
+
 									}
 									}
 									
