@@ -94,8 +94,8 @@
 									console.log('mouse = ', x, ', ', y, positionAndNormal);
 									
 									let elementName = document.createElement("div");
-									elementName.classList.add('element name');
-									elementName.appendChild(document.createTextNode(newsensornam));
+									elementName.classList.add('element-name');
+									elementName.appendChild(document.createTextNode(newsensorname));
 									document.getElementById(`hotspot-${hotspotCounter}`).appendChild(elementName);
 
 
