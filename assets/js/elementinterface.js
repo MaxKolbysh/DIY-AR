@@ -54,8 +54,8 @@
 												newsensorname ="no name";
 											}
 											
-											let inputtext ="Name: "+ newsensorname + "Value: "+ document.querySelector("option:checked").dataset.sensorvalue;
-											console.log(nametest);
+											let inputtext =document.querySelector("option:checked").dataset.sensorvalue;
+										
 
 
 											// if input = nothing then alert error if it isnt then add the hotspot
@@ -93,11 +93,17 @@
 									viewer.appendChild(hotspot);
 									console.log('mouse = ', x, ', ', y, positionAndNormal);
 									
-									
-									// adds the text to last hotspot
+									let elementName = document.createElement("div");
+									elementName.classList.add('element name');
+									elementName.appendChild(document.createTextNode(newsensornam));
+									document.getElementById(`hotspot-${hotspotCounter}`).appendChild(elementName);
+
+
+									// adds the text with value to last hotspot
 									let element = document.createElement("div");
 									element.classList.add('annotation');
 									element.dataset.sensorval=document.querySelector("option:checked").dataset.sensor;
+								
 									element.appendChild(document.createTextNode(inputtext));
 									document.getElementById(`hotspot-${hotspotCounter}`).appendChild(element);
 									
@@ -107,8 +113,7 @@
 									
 
 
-									let nametest = document.getElementById('name test');	  // del after tests !!!!!!!!!!!!!!!!!!!!!
-										nametest.innerHTML = "Name: "+ "Value: "+ document.querySelector("option:checked").dataset.sensorvalue;
+									
 									
 									
 										function removeHotspotlast(){

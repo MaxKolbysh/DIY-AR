@@ -68,7 +68,7 @@
     width: 65%;
     height: max-content;
     transform: translate3d(-50%, -50%, 0);
-	z-index:+2;
+	z-index:+22;
     --min-hotspot-opacity: 0;
   }
 
