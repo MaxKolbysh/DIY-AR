@@ -128,10 +128,14 @@
 
 									function myOpenClosemenu() {
 										let x = document.querySelector('[class="dim"]');
+										let buttom = document.getElementById("controls-button");
 									if (x.style.display === "none") {
 										x.style.display = "block";
+										buttom.style.display = "none";
+
 									} else {
 										x.style.display = "none";
+										buttom.style.display = "block";
 									}
 									}
 
