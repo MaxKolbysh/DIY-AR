@@ -110,6 +110,15 @@
 									el.remove()}; // Removes the last added hotspot
 									}
 
+									function myOpenClosemenu() {
+										let x = document.querySelector('[class="dim"]');
+									if (x.style.display === "none") {
+										x.style.display = "block";
+									} else {
+										x.style.display = "none";
+									}
+									}
+
 
 
 									

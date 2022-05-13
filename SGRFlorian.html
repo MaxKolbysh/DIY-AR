@@ -95,7 +95,9 @@
 									shadow-intensity="1" autoplay>
 									<button slot="hotspot-0"  class="hotspot" id="hotspot-1" data-toggle="modal" data-target="#exampleModalCenter" data-position="-13.029123187087503m 1.766086267414555m -19.515716307183375m" data-normal="0.4437539599793282m 0.7402590410985896m 0.5050732373373801m"><div class="annotation">32.7 °C</div></button>
 										
-										 
+										<button class="btn" id = "controls-button" onclick="myOpenClosemenu()">Open menu</button>
+										
+ 
 										<div id="controls" class="dim">
 											<label for="src">Sensors:</label>
 											<select id="src" name="dropdown" >
@@ -109,7 +111,11 @@
 											
 												<input type="text" id="hotspottext" name="hotspottext" placeholder="Input sensor name">
 											</form>	
-											<div class="center"><button class="btn" onclick="removeHotspotlast()">Remove last Data</button></div>
+											<div class="center">
+												<button class="btn" onclick="myOpenClosemenu()">Hide menu</button>
+												<button class="btn" onclick="removeHotspotlast()">Remove last Data</button>
+												
+											</div>
 											
 											
 										  </div>
@@ -171,11 +177,16 @@
 
 										</div>
 										<div class="modal-body">
+											
+											<div>
+												<p>Current temp: <span>34</span></p>
+											</div>
+											<!--
 											<form onSubmit="return false;">
 											
 												<input type="text" id="hotspottext" name="hotspottext" placeholder="Input sensor name">
 											</form>
-											
+											-->
 
 										</div>
 										<div class="modal-footer">
