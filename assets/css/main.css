@@ -33,6 +33,12 @@
 	cursor: pointer;
   }
   
+/* Hotspot */
+
+.hotspot{
+	text-align: left;
+
+}
   
 
 #controls-button{
@@ -167,15 +173,6 @@
 		    box-sizing: border-box;
 		  }
 
-	button.buttonmosel1[slot="hotspot1"]{
-		    --min-hotspot-opacity: 0;
-		    background-color: red ;
-		  }
-
-	button.buttonmodel2[slot="hotspot2"]:not([data-visible]) {
-		    background-color: transparent;
-		    border: 3px solid blue;
-		  }
 
 	
 
