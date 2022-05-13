@@ -65,7 +65,7 @@
     overflow-wrap: break-word;
     padding: 0.5em 1em;
     position: absolute;
-    width: 85%;
+    width: 65%;
     height: max-content;
     transform: translate3d(-50%, -50%, 0);
 	z-index:+2;

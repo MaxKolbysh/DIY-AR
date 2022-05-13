@@ -54,7 +54,7 @@
 												newsensorname ="no name";
 											}
 											
-											let inputtext ="Name: "+ newsensorname+ "<br>" + "Value: "+ document.querySelector("option:checked").dataset.sensorvalue;
+											let inputtext ="Name: "+ newsensorname + "Value: "+ document.querySelector("option:checked").dataset.sensorvalue;
 											console.log(nametest);
 
 
@@ -84,7 +84,7 @@
 									hotspot.id = `hotspot-${hotspotCounter}`;
 									hotspot.dataset.toggle ="modal"						// modal window now sstatic , but foe update
 									hotspot.dataset.target ="#exampleModalCenter" 
-									hotspot.dataset.sensorval=document.querySelector("option:checked").dataset.sensor;
+									
 									hotspot.dataset.position = position.toString();
 									
 									if (normal != null) {
@@ -97,6 +97,7 @@
 									// adds the text to last hotspot
 									let element = document.createElement("div");
 									element.classList.add('annotation');
+									element.dataset.sensorval=document.querySelector("option:checked").dataset.sensor;
 									element.appendChild(document.createTextNode(inputtext));
 									document.getElementById(`hotspot-${hotspotCounter}`).appendChild(element);
 									
@@ -107,7 +108,7 @@
 
 
 									let nametest = document.getElementById('name test');	  // del after tests !!!!!!!!!!!!!!!!!!!!!
-										nametest.innerHTML = inputtext;
+										nametest.innerHTML = "Name: "+ "Value: "+ document.querySelector("option:checked").dataset.sensorvalue;
 									
 									
 										function removeHotspotlast(){
