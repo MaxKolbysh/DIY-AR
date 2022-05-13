@@ -100,17 +100,25 @@
  
 										<div id="controls" class="dim">
 											<label for="src">Sensors:</label>
-											<select id="src" name="dropdown" >
-											  <option  id="mqttdata-name" data-sensor="sensor1"  >Loading...</option>
-											  <option id="test 2" data-sensor="sensor2"  >Data2</option>
-											  <option id="test 3" data-sensor="sensor3"  >Data3</option>
-											</select><br>
-										
 											
 											<form onSubmit="return false;">
 											
 												<input type="text" id="hotspottext" name="hotspottext" placeholder="Input sensor name">
-											</form>	
+											</form>
+											
+											
+											<select id="src" name="dropdown" >
+											  <option  id="mqttdata-name" data-sensor="sensor1"  >Loading...</option>
+											  <option id="test 2" data-sensor="sensor2"  >Loading...</option>
+											  <option id="test 3" data-sensor="sensor3"  >Loading...</option>
+											</select><br>
+										
+											
+											
+											<div>
+												<p>Current temp: <span data-sensorval="sensor1">...</span></p>
+												<p id="name test">name</p>
+											</div>	
 											<div class="center">
 												<button class="btn" onclick="myOpenClosemenu()">Hide menu</button>
 												<button class="btn" onclick="removeHotspotlast()">Remove last Data</button>
@@ -178,9 +186,7 @@
 										</div>
 										<div class="modal-body">
 											
-											<div>
-												<p>Current temp: <span>34</span></p>
-											</div>
+											
 											<!--
 											<form onSubmit="return false;">
 											

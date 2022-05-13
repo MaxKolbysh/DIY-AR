@@ -39,8 +39,9 @@
     position: absolute;
     bottom: 28px;
     left: 28px;
-    max-width: unset;
+    max-width: 115px;
     transform: unset;
+	text-align: center;
   }
 
 #controls {
@@ -67,6 +68,7 @@
     width: 85%;
     height: max-content;
     transform: translate3d(-50%, -50%, 0);
+	z-index:+2;
     --min-hotspot-opacity: 0;
   }
 

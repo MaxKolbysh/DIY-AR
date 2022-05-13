@@ -42,14 +42,20 @@
 		
 									
 									
-									
-											
+										
 									
 										//hotspot counter so we can keep track of how many we added on 1 because we already have hotspot-0 and hotspot-1 (set to 0 if you start with 0 hotspots)
 										let hotspotCounter = 1;
 										function addHotspot(MouseEvent) {
-											let inputtext = document.querySelector("option:checked").dataset.sensorvalue;
 											
+										
+											let newsensorname = document.getElementById("hotspottext").value;
+											if (newsensorname == ""){
+												newsensorname ="no name";
+											}
+											
+											let inputtext ="Name: "+ newsensorname+ "<br>" + "Value: "+ document.querySelector("option:checked").dataset.sensorvalue;
+											console.log(nametest);
 
 
 											// if input = nothing then alert error if it isnt then add the hotspot
@@ -98,6 +104,10 @@
 									}
 									}
 									
+
+
+									let nametest = document.getElementById('name test');	  // del after tests !!!!!!!!!!!!!!!!!!!!!
+										nametest.innerHTML = inputtext;
 									
 									
 										function removeHotspotlast(){
