@@ -3,8 +3,9 @@
                                         
                                         
                                     const viewer = document.getElementById("modelblock");
-									let hotspots = viewer.getElementsByClassName("hotspot");
-
+									let hotspotCounter = 0;
+									
+									
 									
                                     
 
@@ -12,7 +13,7 @@
                                     function selected(){
 												// Add active class to the current button (highlight it)
 									
-									
+									let hotspots = viewer.getElementsByClassName("hotspot");
 									console.log("open function")
 									for (let i = 0; i < hotspots.length; i++) {
 									  hotspots[i].addEventListener("click", function() {
@@ -28,6 +29,10 @@
 									
 										}
 
+										
+
+										
+
 										function removeHotspot(){
 										
 											let el =document.querySelector('[class="hotspot selected"]');
@@ -36,8 +41,10 @@
 											if (el == null){
 												alert("No hotspots to delete 2");
 											}else{
-												hotspotCounter --;
-										el.remove()}; // Removes the selected hotspot
+												
+										el.remove();
+												
+									}; // Removes the selected hotspot
 										}
 		
 									
@@ -45,7 +52,7 @@
 										
 									
 										//hotspot counter so we can keep track of how many we added on 1 because we already have hotspot-0 and hotspot-1 (set to 0 if you start with 0 hotspots)
-										let hotspotCounter = 1;
+										
 										function addHotspot(MouseEvent) {
 											
 										
