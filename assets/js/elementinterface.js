@@ -132,7 +132,7 @@
 									let elementDataContainer = document.createElement("div");
 							
 									elementDataContainer.id= `elementdatacontainer-${hotspotCounter}`;
-									
+									elementDataContainer.classList.add("elementdatacontainer");
 									document.getElementById(`hotspot-${hotspotCounter}`).appendChild(elementDataContainer);
 									
 									let elementName = document.createElement("div");
