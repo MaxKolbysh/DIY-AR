@@ -40,8 +40,10 @@
 									
 
 									viewer.addEventListener('click',modalUpdate = (e) =>{
-										topicCardValue.dataset.sensor=e.target.dataset.sensorval; // sensor and sensorval same data
-										sensorCardValue.dataset.sensorval=e.target.dataset.sensorval;
+										
+										let newData = e.target.dataset.sensornumber;
+										topicCardValue.dataset.sensor=newData; // sensor and sensorval same data
+										sensorCardValue.dataset.sensorval=newData;
 										console.log(e.target.dataset.sensorval);
 									});	
 
@@ -126,6 +128,7 @@
 									let elementDataContainer = document.createElement("div");
 							
 									elementDataContainer.id= `elementdatacontainer-${hotspotCounter}`;
+									elementDataContainer.dataset.sensornumber = document.querySelector("option:checked").dataset.sensor;
 									document.getElementById(`hotspot-${hotspotCounter}`).appendChild(elementDataContainer);
 									
 									let elementName = document.createElement("div");
