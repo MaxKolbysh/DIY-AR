@@ -177,22 +177,21 @@
 		  }
 
 
-	
+	.elementdatacontainer{
+		background-color: #f2f2f2;
+   	 	position: absolute;
+    	transform: translate(10px, 10px);
+    	border-radius: 10px;
+    	padding: 10px;
 
-  #annotation{
-    background-color: #888888;
-    position: absolute;
-    transform: translate(10px, 10px);
-    border-radius: 10px;
-    padding: 10px;
-  }
-  #element-name{
-    background-color: #888888;
-    position: absolute;
-    transform: translate(10px, 40px);
-    border-radius: 10px;
-    padding: 10px;
-  }
+
+
+	}
+	.elementdatacontainer:hover {
+		background-color: white;
+	}
+
+
 
 
   /* This keeps child nodes hidden while the element loads */
@@ -4636,11 +4635,23 @@
 		    display: inline-block;
 		    
 		}
+		
+		button.hotspot{
+			width: 10px;
+			height: 10px;
+			border-radius: 10px;
+			border: none;
+			background-color: blue;
+			padding: 0;
+		}
 
-		button.Hotspot{
-			border-radius: 20%;
-			background: #f5da51;
-
+		button.hotspot:hover{
+			width: 15px;
+			height: 15px;
+			border-radius: 10px;
+			border: none;
+			background-color: #DC3545;
+			padding: 0;
 		}
 
 
