@@ -14,23 +14,40 @@
 												// Add active class to the current button (highlight it)
 									
 									let hotspots = viewer.getElementsByClassName("hotspot");
-									console.log("open function")
+									
+
 									for (let i = 0; i < hotspots.length; i++) {
 									  hotspots[i].addEventListener("click", function() {
 									 let current = document.getElementsByClassName("selected");
 									  if (current.length > 0) { 
 										current[0].className = current[0].className.replace(" selected", "");
-										console.log("next function unselected")
+										
 									  }
 									  this.className += " selected";
-									  console.log("next function selected");
+									  
 									  });
 									}
 									
 										}
 
 										
+									
+									//modal window change
 
+									let topicCardValue = document.getElementById("topic-card-value");
+									let sensorCardValue = document.getElementById("sensor-card-value");
+									
+									
+
+									viewer.addEventListener('click',modalUpdate = (e) =>{
+										topicCardValue.dataset.sensor=e.target.dataset.sensorval;
+										sensorCardValue.dataset.sensor=e.target.dataset.sensorval;
+										console.log(e.target.dataset.sensorval);
+									});	
+
+
+
+									
 										
 
 										function removeHotspot(){

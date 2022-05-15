@@ -94,8 +94,9 @@
 									magic-leap camera-controls environment-image="neutral" 
 									shadow-intensity="1"
 									camera-orbit="45deg 55deg 2.5m"
+									min-camera-orbit = "-Infinity 22.5deg auto"
 									autoplay>
-									<!--<button slot="hotspot-0" data-sensorval="sensor1"  class="hotspot" id="hotspot-1" data-toggle="modal" data-target="#exampleModalCenter" data-position="-13.029123187087503m 1.766086267414555m -19.515716307183375m" data-normal="0.4437539599793282m 0.7402590410985896m 0.5050732373373801m"><div class="annotation">32.7 °C </div></button> -->
+									<!--<button slot="hotspot-0" data-sensorval="sensor1"  class="hotspot" id="hotspot-1" data-toggle="modal" data-target="#exampleModalCenter" data-position="-13.029123187087503m 1.766086267414555m -19.515716307183375m" data-normal="0.4437539599793282m 0.7402590410985896m 0.5050732373373801m"><div class="annotation">32.7 °C </div></button>-->
 										
 										<button class="btn" id = "controls-button" onclick="myOpenClosemenu()">Open menu</button>
 										
@@ -119,6 +120,7 @@
 											
 											<div>
 												<p>Current temp: <span data-sensorval="sensor1">...</span></p>
+												
 												
 											</div>	
 											<div class="center">
@@ -172,9 +174,10 @@
 													<div class="card">
 														<div class="card-body">
 															<div class="card-title">
-																<div id="mqtt-topic">topic</div>
+																<!--<div id="mqtt-topic">topic</div>-->
 																
-																<p>Sensor value:<span id="mqtt-value-label" class="text-muted float-right badge">Unknown</span></p>
+																<p>Topic: <span id="topic-card-value"  class="text-muted float-center" data-sensor="sensor1">Unknown</span></p>
+																<p>Sensor value: <span id="sensor-card-value" data-sensorval="sensor1" class="text-muted float-center">Unknown</span></p>
 																
 																
 															</div>
@@ -190,7 +193,7 @@
 										</div>
 										<div class="modal-body">
 											
-											
+											<input type="text" id="hotspottextmodal" name="hotspottext" placeholder="Change sensor name">
 											<!--
 											<form onSubmit="return false;">
 											
