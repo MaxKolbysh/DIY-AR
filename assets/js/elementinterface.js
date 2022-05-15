@@ -44,7 +44,7 @@
 										let newData = e.target.dataset.sensornumber;
 										topicCardValue.dataset.sensor=newData; // sensor and sensorval same data
 										sensorCardValue.dataset.sensorval=newData;
-										console.log(e.target.dataset.sensorval);
+										console.log(e.target.dataset.sensornumber);
 									});	
 
 
