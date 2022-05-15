@@ -57,12 +57,13 @@
 											
 										
 											let newsensorname = document.getElementById("hotspottext").value;
+											newsensorname = newsensorname == "" ? "no name" :  newsensorname;
 											/*
 											if (newsensorname == ""){
 												newsensorname ="no name";
 											}
 											*/
-											newsensorname = newsensorname == "" ? "no name" :  newsensorname;
+											
 											
 											let inputtext =document.querySelector("option:checked").dataset.sensorvalue;
 										
