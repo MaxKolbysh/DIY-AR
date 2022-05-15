@@ -43,8 +43,7 @@
 										
 										let newData = e.target.closest("[data-sensornumber]");
 										if (!newData) return;
-										console.log(newData.dataset.sensornumber);
-										console.log(newData.id);
+										
 										
 										topicCardValue.dataset.sensor=newData.dataset.sensornumber; // sensor and sensorval same data
 										sensorCardValue.dataset.sensorval=newData.dataset.sensornumber;
@@ -187,8 +186,17 @@
 									// marker names update modal window
 
 									function updateHotspot(){
-
-
+										
+										//document.querySelector('[data-modal-counter-hotspot]')
+										const newHotspotName=document.getElementById("hotspottextmodal").value
+										if (!newHotspotName) return;
+										const hotspotNumbertoUpdate = document.querySelector('[data-modal-counter-hotspot]');
+										
+										let parrent = viewer.querySelector("#"+hotspotNumbertoUpdate.dataset.modalCounterHotspot);
+										
+										let child = parrent.querySelector(".element-name");
+										child.innerHTML=newHotspotName;
+										document.getElementById("hotspottextmodal").value = "";
 
 									}
 
