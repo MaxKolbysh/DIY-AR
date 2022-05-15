@@ -41,10 +41,13 @@
 
 									viewer.addEventListener('click',modalUpdate = (e) =>{
 										
-										let newData = e.target.dataset.sensornumber;
-										topicCardValue.dataset.sensor=newData; // sensor and sensorval same data
-										sensorCardValue.dataset.sensorval=newData;
-										console.log(e.target.dataset.sensornumber);
+										let newData = e.target.closest("[data-sensornumber]");
+										if (!newData) return;
+										console.log(newData.dataset.sensornumber);
+										
+										topicCardValue.dataset.sensor=newData.dataset.sensornumber; // sensor and sensorval same data
+										sensorCardValue.dataset.sensorval=newData.dataset.sensornumber;
+										
 									});	
 
 
