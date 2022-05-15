@@ -96,20 +96,20 @@
 									camera-orbit="45deg 55deg 2.5m"
 									min-camera-orbit = "-Infinity 22.5deg auto"
 									autoplay>
-									<!--<button slot="hotspot-0" data-sensorval="" data-sensornumber="sensor1" class="hotspot" id="hotspot-1" data-toggle="modal" data-target="#exampleModalCenter" data-position="-13.029123187087503m 1.766086267414555m -19.515716307183375m" data-normal="0.4437539599793282m 0.7402590410985896m 0.5050732373373801m"><div class="annotation">32.7 °C </div></button>-->
+									<!--<button slot="hotspot-0" data-sensorval="sensor1" data-sensornumber="sensor1" class="hotspot" id="hotspot-1" data-toggle="modal" data-target="#exampleModalCenter" data-position="-13.029123187087503m 1.766086267414555m -19.515716307183375m" data-normal="0.4437539599793282m 0.7402590410985896m 0.5050732373373801m"><div class="annotation">32.7 °C </div></button>-->
 										
 										<button class="btn" id = "controls-button" onclick="myOpenClosemenu()">Open menu</button>
 										
  
 										<div id="controls" class="dim">
-											<label for="src">Sensors:</label>
+											<label for="src">Custom marker name:</label>
 											
 											<form onSubmit="return false;">
 											
-												<input type="text" id="hotspottext" name="hotspottext" placeholder="Input sensor name">
+												<input type="text" id="hotspottext" name="hotspottext" placeholder="Input marker name for location">
 											</form>
 											
-											
+											<label for="src">Sensors list:</label>
 											<select id="src" name="dropdown" >
 											  <option  id="mqttdata-name" data-sensor="sensor1"  >Loading...</option>
 											  <option id="test 2" data-sensor="sensor2"  >Loading...</option>
@@ -203,8 +203,8 @@
 
 										</div>
 										<div class="modal-footer">
-										<button type="button" class="btn btn-danger" onclick="removeHotspot()" data-dismiss="modal">Delete sensor</button>	
-										
+										<button type="button" class="btn btn-danger" onclick="removeHotspot()" data-dismiss="modal">Delete marker</button>	
+										<button type="button" class="btn btn-success" onclick="updateHotspot()" data-dismiss="modal">Update marker</button>
 										<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 										</div>
 									</div>

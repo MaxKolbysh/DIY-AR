@@ -36,7 +36,7 @@
 
 									let topicCardValue = document.getElementById("topic-card-value");
 									let sensorCardValue = document.getElementById("sensor-card-value");
-									
+									let modalBox =document.querySelector('[class="modal-content"]');
 									
 
 									viewer.addEventListener('click',modalUpdate = (e) =>{
@@ -44,10 +44,11 @@
 										let newData = e.target.closest("[data-sensornumber]");
 										if (!newData) return;
 										console.log(newData.dataset.sensornumber);
+										console.log(newData.id);
 										
 										topicCardValue.dataset.sensor=newData.dataset.sensornumber; // sensor and sensorval same data
 										sensorCardValue.dataset.sensorval=newData.dataset.sensornumber;
-										
+										modalBox.dataset.modalCounterHotspot = newData.id; 
 									});	
 
 
@@ -116,7 +117,8 @@
 									hotspot.classList.add('hotspot');
 									hotspot.id = `hotspot-${hotspotCounter}`;
 									hotspot.dataset.toggle ="modal"						// modal window now sstatic , but foe update
-									hotspot.dataset.target ="#exampleModalCenter" 
+									hotspot.dataset.target ="#exampleModalCenter"
+
 									hotspot.dataset.sensornumber = document.querySelector("option:checked").dataset.sensor;
 									hotspot.dataset.position = position.toString();
 									
@@ -182,7 +184,13 @@
 									}
 									}
 
+									// marker names update modal window
 
+									function updateHotspot(){
+
+
+
+									}
 
 									
 
