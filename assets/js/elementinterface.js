@@ -40,8 +40,8 @@
 									
 
 									viewer.addEventListener('click',modalUpdate = (e) =>{
-										topicCardValue.dataset.sensor=e.target.dataset.sensorval;
-										sensorCardValue.dataset.sensor=e.target.dataset.sensorval;
+										topicCardValue.dataset.sensor=e.target.dataset.sensorval; // sensor and sensorval same data
+										sensorCardValue.dataset.sensorval=e.target.dataset.sensorval;
 										console.log(e.target.dataset.sensorval);
 									});	
 
