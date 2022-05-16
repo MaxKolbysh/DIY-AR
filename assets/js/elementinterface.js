@@ -34,7 +34,7 @@
 									
 									//modal window change
 
-									let topicCardValue = document.getElementById("topic-card-value");
+									let topicCardValue = document.getElementById("topic-card-value"); //  modal window 
 									let sensorCardValue = document.getElementById("sensor-card-value");
 									let modalBox =document.querySelector('[class="modal-content"]');
 									
@@ -191,21 +191,26 @@
 									}
 									}
 
-									// marker names update modal window
+									// marker names update in modal window
 
 									function updateHotspot(){
 										
 										//document.querySelector('[data-modal-counter-hotspot]')
 										const newHotspotName=document.getElementById("hotspottextmodal").value
-										if (!newHotspotName) return;
+										const newHotspotUnit=document.getElementById("hotspotunitchange").value
+										if (!newHotspotName&&!newHotspotUnit) return;
 										const hotspotNumbertoUpdate = document.querySelector('[data-modal-counter-hotspot]');
+										const hotspotId=hotspotNumbertoUpdate.dataset.modalCounterHotspot
 										
-										let parrent = viewer.querySelector("#"+hotspotNumbertoUpdate.dataset.modalCounterHotspot);
-										
+										console.log(parseInt(hotspotId.match(/\d+/)));
+										let parrent = viewer.querySelector("#"+hotspotId);
+		
 										let child = parrent.querySelector(".element-name");
-										child.innerHTML=newHotspotName;
+										let unitEl = document.getElementById("spanunit-"+hotspotId.match(/\d+/));
+										child.innerHTML=newHotspotName;  // adding new name for marker
+										unitEl.innerHTML=newHotspotUnit  // adding new Unit for marker 
 										document.getElementById("hotspottextmodal").value = "";
-
+										document.getElementById("hotspotunitchange").value = "";
 									}
 
 									

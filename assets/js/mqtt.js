@@ -66,9 +66,9 @@ function onMessageArrived(message) {
     $('#mqttdata').html('Temp is: ' +payload + ' °C');
     $('#mqttdatadinamic').html('Temp is: ' +payload + ' °C');
     
-    $('[data-sensor="sensor1"]').html(topic).attr('data-sensorValue', (payload));
-    $('[data-sensor="sensor2"]').html(topic+" n2").attr('data-sensorValue', (payload)); // F - for different data simulation
-    $('[data-sensor="sensor3"]').html(topic+" n3").attr('data-sensorValue', (payload ));  // K - for different data simulation
+    $('[data-sensor="sensor1"]').html(topic);
+    $('[data-sensor="sensor2"]').html(topic+" n2"); // F - for different data simulation
+    $('[data-sensor="sensor3"]').html(topic+" n3");  // K - for different data simulation
     
     $('[data-sensorval="sensor1"]').html(payload );
     $('[data-sensorval="sensor2"]').html(payload );
