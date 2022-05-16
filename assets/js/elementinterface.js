@@ -200,8 +200,8 @@
 									function updateHotspot(){
 										
 										//document.querySelector('[data-modal-counter-hotspot]')
-										const newHotspotName=document.getElementById("hotspottextmodal").value
-										const newHotspotUnit=document.getElementById("hotspotunitchange").value
+										let newHotspotName=document.getElementById("hotspottextmodal").value
+										let newHotspotUnit=document.getElementById("hotspotunitchange").value
 										
 										
 										
