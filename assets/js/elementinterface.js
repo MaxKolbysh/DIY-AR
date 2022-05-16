@@ -78,7 +78,7 @@
 										function addHotspot(MouseEvent) {
 											
 										
-											const newsensorname = document.getElementById("hotspottext").value;
+											let newsensorname = document.getElementById("hotspottext").value;
 											newsensorname = newsensorname == "" ? "no name" :  newsensorname;
 											/*
 											if (newsensorname == ""){
@@ -154,7 +154,7 @@
 									// name of the sensor
 									let spanUnit = document.createElement("span");
 									spanUnit.id=`spanunit-${hotspotCounter}`
-									spanUnit.innerHTML = " "+hotspotunit;
+									spanUnit.innerHTML = " "+newSensorUnit;
 									//element.appendChild(document.createTextNode(inputtext));
 									element.appendChild(spanData);
 									element.appendChild(spanUnit);
@@ -217,9 +217,12 @@
 										let unitEl = document.getElementById("spanunit-"+hotspotId.match(/\d+/));
 										if (newHotspotName){  // chek if empty, not to re write with empty
 											child.innerHTML=newHotspotName;// adding new name for marker
+										} else if (newHotspotUnit){
+											unitEl.innerHTML=" "+newHotspotUnit  // adding new Unit for marker
+
 										}
 										  
-										unitEl.innerHTML=" "+newHotspotUnit  // adding new Unit for marker 
+										 
 
 										console.log(newHotspotName);
 										console.log(newHotspotUnit);
