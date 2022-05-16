@@ -155,6 +155,11 @@
 		  flex-grow: 2;
 		}
 
+	#hotspotunit, #hotspotunitchange{
+		max-width: 50%;
+		margin-top: 15px;
+	}
+
 	model-viewer {
 	  width: 100%;
 	  height: 100%;
@@ -178,7 +183,7 @@
 
 
 	.elementdatacontainer{
-		background-color: #f2f2f2;
+		background-color: rgba(242, 242, 242, 0.5);
    	 	position: absolute;
     	transform: translate(10px, 10px);
     	border-radius: 5px;

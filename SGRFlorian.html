@@ -61,7 +61,7 @@
 		
 		
 
-		
+		 
 		
 		
 	</head>
@@ -96,17 +96,19 @@
 									camera-orbit="45deg 55deg 2.5m"
 									min-camera-orbit = "-Infinity 22.5deg auto"
 									autoplay>
-									<!--<button slot="hotspot-0" class="hotspot selected" id="hotspot-1" data-toggle="modal" data-target="#exampleModalCenter" data-sensornumber="sensor2" data-position="-13.897610316542053m 2.3194745470530327m -35.75913009007693m" data-normal="-0.2375255090474513m 0.9485134348744524m 0.20953256647695012m"><div id="elementdatacontainer-1" class="elementdatacontainer" ><div class="element-name">no name</div><div class="annotation" data-sensorval="sensor2">30.7 F</div></div></button>-->
+									<button slot="hotspot-0" class="hotspot selected" id="hotspot-1" data-toggle="modal" data-target="#exampleModalCenter" data-sensornumber="sensor2" data-position="-13.897610316542053m 2.3194745470530327m -35.75913009007693m" data-normal="-0.2375255090474513m 0.9485134348744524m 0.20953256647695012m"><div id="elementdatacontainer-1" class="elementdatacontainer" ><div class="element-name">no name</div><div class="annotation" data-sensorval="sensor2">30.7 F</div></div></button>
 										
 										<button class="btn" id = "controls-button" onclick="myOpenClosemenu()">Open menu</button>
 										
  
 										<div id="controls" class="dim">
-											<label for="src">Custom marker name:</label>
+											<label for="src">Custom marker name and unit:</label>
 											
-											<form onSubmit="return false;">
+											<form >
 											
 												<input type="text" id="hotspottext" name="hotspottext" placeholder="Input marker name for location">
+												<input type="text" id="hotspotunit" name="hotspotunit" placeholder="Input marker unit">
+
 											</form>
 											
 											<label for="src">Sensors list:</label>
@@ -115,14 +117,22 @@
 											  <option id="test 2" data-sensor="sensor2"  >Loading...</option>
 											  <option id="test 3" data-sensor="sensor3"  >Loading...</option>
 											</select><br>
-										
+
+											<label for="src">Input sensors topic:</label>
+											<form >
+											
+												<input type="text" id="hotspottopic" name="hotspottopic" placeholder="Input topic">
+												
+
+											</form>
 											
 											
 											<div>
-												<p>Current temp: <span data-sensorval="sensor1">...</span></p>
+												<p>Current temp: <span data-sensorval="sensor1">...</span> C°</p>
 												
 												
-											</div>	
+											</div>
+											<div class="annotation" ><span  data-sensorval="sensor2">...</span><span>C~</span></div>	
 											<div class="center">
 												<button class="btn" onclick="myOpenClosemenu()">Hide menu</button>
 												<button class="btn" onclick="removeHotspotlast()">Remove last Data</button>
@@ -194,6 +204,7 @@
 										<div class="modal-body">
 											
 											<input type="text" id="hotspottextmodal" name="hotspottext" placeholder="Change sensor name">
+											<input type="text" id="hotspotunitchange" name="hotspotunitchange" placeholder="Change marker unit">
 											<!--
 											<form onSubmit="return false;">
 											

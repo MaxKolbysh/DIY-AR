@@ -144,9 +144,17 @@
 									// adds the text with value to last hotspot
 									let element = document.createElement("div");
 									element.classList.add('annotation');
-									element.dataset.sensorval=document.querySelector("option:checked").dataset.sensor;
-								
-									element.appendChild(document.createTextNode(inputtext));
+									//element.dataset.sensorval=document.querySelector("option:checked").dataset.sensor;
+									let spanData = document.createElement("span");
+									
+									spanData.dataset.sensorval=document.querySelector("option:checked").dataset.sensor;
+									spanData.id = `spandata-${hotspotCounter}`;
+									spanData.appendChild(document.createTextNode(inputtext))
+									let spanUnit = document.createElement("span");
+									spanUnit.id=`spanunit-${hotspotCounter}`
+									//element.appendChild(document.createTextNode(inputtext));
+									element.appendChild(spanData);
+									element.appendChild(spanUnit);
 									document.getElementById(`elementdatacontainer-${hotspotCounter}`).appendChild(element);
 									
 									document.querySelector('input').value = "";

@@ -66,13 +66,13 @@ function onMessageArrived(message) {
     $('#mqttdata').html('Temp is: ' +payload + ' °C');
     $('#mqttdatadinamic').html('Temp is: ' +payload + ' °C');
     
-    $('[data-sensor="sensor1"]').html(topic).attr('data-sensorValue', (payload + ' °C'));
-    $('[data-sensor="sensor2"]').html(topic+" n2").attr('data-sensorValue', (payload + ' F')); // F - for different data simulation
-    $('[data-sensor="sensor3"]').html(topic+" n3").attr('data-sensorValue', (payload  +' K'));  // K - for different data simulation
+    $('[data-sensor="sensor1"]').html(topic).attr('data-sensorValue', (payload));
+    $('[data-sensor="sensor2"]').html(topic+" n2").attr('data-sensorValue', (payload)); // F - for different data simulation
+    $('[data-sensor="sensor3"]').html(topic+" n3").attr('data-sensorValue', (payload ));  // K - for different data simulation
     
-    $('[data-sensorval="sensor1"]').html(payload + ' °C');
-    $('[data-sensorval="sensor2"]').html(payload + ' F');
-    $('[data-sensorval="sensor3"]').html(payload + ' K');
+    $('[data-sensorval="sensor1"]').html(payload );
+    $('[data-sensorval="sensor2"]').html(payload );
+    $('[data-sensorval="sensor3"]').html(payload );
 	tempData.push({
 		"timestamp": Date().slice(16, 21),
 		"temperature": parseInt(payload)
