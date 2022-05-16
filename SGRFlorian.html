@@ -96,13 +96,21 @@
 									camera-orbit="45deg 55deg 2.5m"
 									min-camera-orbit = "-Infinity 22.5deg auto"
 									autoplay>
-									<!--<button slot="hotspot-1" class="hotspot selected" id="hotspot-2" data-toggle="modal" data-target="#exampleModalCenter" data-sensornumber="sensor1" data-position="-39.25901782860971m -0.08411407470704013m 7.234298563821497m" data-normal="0m 1m 0m"><div id="elementdatacontainer-2" class="elementdatacontainer"><div class="element-name">eweeeweee</div><div class="annotation"><span data-sensorval="sensor1" id="spandata-2">32.2</span><span id="spanunit-2"></span></div></div></button>-->
+									<button slot="hotspot-1" class="hotspot selected" id="hotspot-2" data-toggle="modal" data-target="#exampleModalCenter" data-sensornumber="sensor1" data-position="-39.25901782860971m -0.08411407470704013m 7.234298563821497m" data-normal="0m 1m 0m"><div id="elementdatacontainer-2" class="elementdatacontainer"><div class="element-name">eweeeweee</div><div class="annotation"><span data-sensorval="sensor1" id="spandata-2">32.2</span><span id="spanunit-2"></span></div></div></button>
 										
 										<button class="btn" id = "controls-button" onclick="myOpenClosemenu()">Open menu</button>
 										
  
 										<div id="controls" class="dim">
-											<label for="src">Custom marker name and unit:</label>
+											<label for="src">Input sensors topic:</label>
+											<form >
+											
+												<input type="text" id="hotspottopic" name="hotspottopic" placeholder="Input topic">
+												
+
+											</form>
+											
+											<label for="src">Input custom marker name and unit:</label>
 											
 											<form >
 											
@@ -118,13 +126,7 @@
 											  <option id="test 3" data-sensor="sensor3"  >Loading...</option>
 											</select><br>
 
-											<label for="src">Input sensors topic:</label>
-											<form >
 											
-												<input type="text" id="hotspottopic" name="hotspottopic" placeholder="Input topic">
-												
-
-											</form>
 											
 											
 											<div>
@@ -187,7 +189,7 @@
 																<!--<div id="mqtt-topic">topic</div>-->
 																
 																<p>Topic: <span id="topic-card-value"  class="text-muted float-center" data-sensor="sensor1">Unknown</span></p>
-																<p>Sensor value: <span id="sensor-card-value" data-sensorval="sensor1" class="text-muted float-center">Unknown</span></p>
+																<p>Sensor value: <span id="sensor-card-value" data-sensorval="sensor1" class="text-muted float-center">Unknown</span><span id="sensor-card-value" class="text-muted float-center" > C</span></p>
 																
 																
 															</div>
