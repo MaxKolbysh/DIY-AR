@@ -93,10 +93,14 @@
 									ar-scale="auto" 
 									magic-leap camera-controls environment-image="neutral" 
 									shadow-intensity="1"
-									camera-orbit="45deg 55deg 2.5m"
-									min-camera-orbit = "-Infinity 22.5deg auto"
+									
+									orbit-sensitivity="0.7"
+									camera-orbit="0deg 75deg 50%"
+									max-camera-orbit="Infinity 88deg 50%"
+									min-camera-orbit="-Infinity 2.5deg 20%"
+									camera-controls enable-pan
 									autoplay>
-									<!--<button slot="hotspot-1" class="hotspot selected" id="hotspot-2" data-toggle="modal" data-target="#exampleModalCenter" data-sensornumber="sensor1" data-position="-39.25901782860971m -0.08411407470704013m 7.234298563821497m" data-normal="0m 1m 0m"><div id="elementdatacontainer-2" class="elementdatacontainer"><div class="element-name">eweeeweee</div><div class="annotation"><span data-sensorval="sensor1" id="spandata-2">32.2</span><span id="spanunit-2"></span></div></div></button>-->
+									<button slot="hotspot-1" class="hotspot" id="hotspot-2" data-toggle="modal" data-target="#exampleModalCenter" data-sensornumber="sensor2" data-position="-10.364563373000458m 1.747439752840085m -21.0170276105123m" data-normal="0.41194080341979067m 0.7788401774882822m 0.4729828246436427m"><div id="elementdatacontainer-2" class="elementdatacontainer"><div class="element-name">no name</div><div class="annotation"><span data-sensorval="sensor2" id="spandata-2">30.8</span><span id="spanunit-2"> </span></div></div></button>
 										
 										<button class="btn" id = "controls-button" onclick="myOpenClosemenu()">Open menu</button>
 										
@@ -189,7 +193,7 @@
 																<!--<div id="mqtt-topic">topic</div>-->
 																
 																<p>Topic: <span id="topic-card-value"  class="text-muted float-center" data-sensor="sensor1">Unknown</span></p>
-																<p>Sensor value: <span id="sensor-card-value" data-sensorval="sensor1" class="text-muted float-center">Unknown</span><span id="sensor-card-unit" class="text-muted float-center" > C</span></p>
+																<p>Sensor value: <span id="sensor-card-value" data-sensorval="sensor1" class="text-muted float-center">Unknown</span><span id="sensor-card-unit" class="text-muted float-center" > °C</span></p>
 																
 																
 															</div>
