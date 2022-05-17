@@ -42,6 +42,7 @@
 									viewer.addEventListener('click',modalUpdate = (e) =>{
 										
 										let newData = e.target.closest("[data-sensornumber]");
+										
 										if (!newData) return;
 										
 										
@@ -53,7 +54,7 @@
 
 
 									
-										
+										// Removes the selected hotspot
 
 										function removeHotspot(){
 										
@@ -66,15 +67,120 @@
 												
 										el.remove();
 												
-									}; // Removes the selected hotspot
+									}; 
 										}
-		
+										
+
+
+										// function for hotspot button 
+
+										function addHotspotButton() {
+											viewer.addEventListener('click', onClick);
+											console.log("function");
+										  }
+
+										  function onClick(MouseEvent) {
+											
+											
+											let newsensorname = document.getElementById("hotspottext").value;
+											newsensorname = newsensorname == "" ? "no name" :  newsensorname;
+											/*
+											if (newsensorname == ""){
+												newsensorname ="no name";
+											}
+											*/
+											const newSensorUnit = document.getElementById("hotspotunit").value;
+											
+											
+											let inputtext =document.querySelector("option:checked").dataset.sensorvalue;
+										
+
+
+											// if input = nothing then alert error if it isnt then add the hotspot
+											if (inputtext == ""){
+										alert("Choose sensor firs, to add on model.");
+									}else{
+										   
+									const viewer = document.querySelector('#modelblock');
+									const rect = viewer.getBoundingClientRect();
 									
-									
+									const x = event.clientX - rect.left;
+									const y = event.clientY - rect.top;
+									const positionAndNormal = viewer.positionAndNormalFromPoint(x, y);
+									console.log("position ",x,y,positionAndNormal);	
+									if (positionAndNormal == null) {
+										console.log('no hit result button: mouse = ', x, ', ', y);
+										return;
+										}
+										const {position, normal} = positionAndNormal;
+										
+										// create the hotspot
+										const hotspot = document.createElement('button');
+										hotspot.slot = `hotspot-${hotspotCounter ++}`;
+										hotspot.classList.add('hotspot');
+										hotspot.id = `hotspot-${hotspotCounter}`;
+										hotspot.dataset.toggle ="modal"						// modal window now sstatic , but foe update
+										hotspot.dataset.target ="#exampleModalCenter"
+	
+										hotspot.dataset.sensornumber = document.querySelector("option:checked").dataset.sensor;
+										hotspot.dataset.position = position.toString();
+										
+										if (normal != null) {
+										hotspot.dataset.normal = normal.toString();
+										}
+										viewer.appendChild(hotspot);
+										console.log('mouse = ', x, ', ', y, positionAndNormal);
+										
+										
+	
+										let elementDataContainer = document.createElement("div");
+								
+										elementDataContainer.id= `elementdatacontainer-${hotspotCounter}`;
+										elementDataContainer.classList.add("elementdatacontainer");
+										document.getElementById(`hotspot-${hotspotCounter}`).appendChild(elementDataContainer);
+										
+										let elementName = document.createElement("div");
+										elementName.classList.add('element-name');
+										elementName.appendChild(document.createTextNode(newsensorname));
+										document.getElementById(`elementdatacontainer-${hotspotCounter}`).appendChild(elementName);
+	
+	
+										// adds the text with value to last hotspot
+										let element = document.createElement("div");
+										element.classList.add('annotation');
+										//element.dataset.sensorval=document.querySelector("option:checked").dataset.sensor;
+										let spanData = document.createElement("span");
+										// value element
+										spanData.dataset.sensorval=document.querySelector("option:checked").dataset.sensor;
+										spanData.id = `spandata-${hotspotCounter}`;
+										spanData.appendChild(document.createTextNode(inputtext))
+										// name of the sensor
+										let spanUnit = document.createElement("span");
+										spanUnit.id=`spanunit-${hotspotCounter}`
+										spanUnit.innerHTML = " "+newSensorUnit;
+										//element.appendChild(document.createTextNode(inputtext));
+										element.appendChild(spanData);
+										element.appendChild(spanUnit);
+										document.getElementById(`elementdatacontainer-${hotspotCounter}`).appendChild(element);
+										
+										document.getElementById("hotspottext").value = "";
+										document.getElementById("hotspotunit").value="";
+	
+	
+
+
+											
+										  }
+										  }
+
+
+
+										
 										
 									
 										//hotspot counter so we can keep track of how many we added on 1 because we already have hotspot-0 and hotspot-1 (set to 0 if you start with 0 hotspots)
 										
+									
 										function addHotspot(MouseEvent) {
 											
 										
