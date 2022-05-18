@@ -237,6 +237,20 @@
 											
 									}
 
+									//camera position 
+
+									function cameraPosition(el){
+
+										console.log(el.value);
+										
+
+										switch (el.value){
+											case "left":
+											viewer.cameraOrbit ="0deg 120deg 50%";
+											break; 	
+										}
+
+									}
 									
 
 

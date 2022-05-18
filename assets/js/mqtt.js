@@ -71,7 +71,7 @@ function onMessageArrived(message) {
 
     console.log("Topic: " + topic + ", Message payload: " + payload);
   */  
-    
+    console.log("Topic: " + topic + ", Message payload: " + payload);
     $('#message').html(topic + ', ' + payload);
     
 	$('#mqtt-topic').text(topic + ':');

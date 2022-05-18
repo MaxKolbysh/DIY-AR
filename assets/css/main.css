@@ -17,7 +17,7 @@
 	justify-content: left;
 	flex-wrap: wrap;
 	flex-direction: row;
-  
+	
   }
   
   .btn{
@@ -31,6 +31,8 @@
 	font-size: 16px;
 	margin: 20px 2px 4px 2px;
 	cursor: pointer;
+	color: #000;
+  }
   }
   
 /* Hotspot */
@@ -48,7 +50,20 @@
     max-width: 115px;
     transform: unset;
 	text-align: center;
+	color: #000;
   }
+
+
+  #nav-button{
+	position: absolute;
+	top: 28px;
+	left: 28px ;
+	max-width: 115px;
+    transform: unset;
+	text-align: center;
+  }
+
+  
 
 #controls {
     position: absolute;
@@ -2157,7 +2172,7 @@
 	button,
 	.button {
 		background-color: #f2f2f2;
-		color: #000 !important;
+		
 	}
 
 		input[type="submit"]:hover,
