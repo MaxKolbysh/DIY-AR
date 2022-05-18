@@ -12,13 +12,15 @@ let mqtt;
 
 
 
-
+let cliendId = "mqtt_panel" + parseInt(Math.random() * 100);
 
 function MQTTconnect() {
     if (typeof path == "undefined") {
         path = '/mqtt';
     }
-    mqtt = new Paho.MQTT.Client(host, port, path, "mqtt_panel" + parseInt(Math.random() * 100, 10));
+    
+    mqtt = new Paho.MQTT.Client(host, port, path, cliendId, 10);
+    
     let options = {
         timeout: 3,
         useSSL: useTLS,
@@ -35,7 +37,7 @@ function MQTTconnect() {
 
     mqtt.onConnectionLost = onConnectionLost;
     mqtt.onMessageArrived = onMessageArrived;
-    console.log("Host: " + host + ", Port: " + port + ", Path: " + path + " TLS: " + useTLS);
+    console.log("Host: " + host + ", Port: " + port + ", Path: " + path + " TLS: " + useTLS + 'ClientId' + cliendId);
     mqtt.connect(options);
 };
 
@@ -55,7 +57,21 @@ function onConnectionLost(response) {
 function onMessageArrived(message) {
     let topic = message.destinationName;
     let payload = message.payloadString;
+
+    let userMessageTopic = document.getElementById("hotspottopic").value
+    console.log("User input: "+ userMessageTopic);
+
+    if (userMessageTopic == topic ){
+        $('[data-sensorval="sensor1"]').html(payload );
+
+    }else {
+        console.log("wrong name");
+    }
+
+
     console.log("Topic: " + topic + ", Message payload: " + payload);
+    
+    /*
     $('#message').html(topic + ', ' + payload);
     
 	$('#mqtt-topic').text(topic + ':');
@@ -81,6 +97,8 @@ function onMessageArrived(message) {
 		tempData.shift()
 	}
 	drawChart(tempData);
+
+    */
  };
 /*
 function drawChart(data) {
