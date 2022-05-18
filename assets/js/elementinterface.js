@@ -101,7 +101,7 @@
 
 
 											// if input = nothing then alert error if it isnt then add the hotspot
-											if (inputtext == ""){
+											if (inputtext == undefined){
 										alert("Input sensors topic firs, to add on model.");
 									}else{
 										   
@@ -127,7 +127,7 @@
 									hotspot.dataset.toggle ="modal"						// modal window now sstatic , but foe update
 									hotspot.dataset.target ="#exampleModalCenter"
 
-									hotspot.dataset.sensornumber = document.querySelector("option:checked").dataset.sensorid;   // changing from sensor
+									hotspot.dataset.sensornumber = querySelector("#sensor-1").dataset.sensorid;   // changing from sensor
 									hotspot.dataset.position = position.toString();
 									
 									if (normal != null) {
