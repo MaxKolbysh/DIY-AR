@@ -97,7 +97,7 @@
 											//let inputtext =document.querySelector("option:checked").dataset.sensorvalue;  // test data flow for drop down list 
 
 											//new data input integration 
-											let inputtext = document.querySelector("#sensor-1").dataset.sensorValue;
+											let inputtext = document.querySelector("#sensor-1").dataset.sensorvalue;
 
 
 											// if input = nothing then alert error if it isnt then add the hotspot
@@ -158,7 +158,7 @@
 									//element.dataset.sensorval=document.querySelector("option:checked").dataset.sensor;
 									let spanData = document.createElement("span");
 									// value element
-									spanData.innerHTML=document.querySelector("#sensor-1").dataset.sensorValue;  // before it was with  span data 
+									spanData.innerHTML=document.querySelector("#sensor-1").dataset.sensorvalue;  // before it was with  span data 
 									spanData.id = `spandata-${hotspotCounter}`;
 									spanData.appendChild(document.createTextNode(inputtext))
 									// name of the unit
