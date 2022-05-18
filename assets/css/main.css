@@ -170,6 +170,25 @@
     	--poster-color: transparent;
     }
 
+	button.hotspot{
+		width: 10px;
+		height: 10px;
+		border-radius: 10px;
+		border: none;
+		background-color: blue;
+		padding: 0;
+		
+	}
+
+	button.hotspot:hover{
+		width: 15px;
+		height: 15px;
+		border-radius: 10px;
+		border: none;
+		background-color: #DC3545;
+		padding: 0;
+	}
+
 
 	button.buttonmodel  {
 		    display: block;
