@@ -63,8 +63,8 @@ function onMessageArrived(message) {
 
     if (userMessageTopic == topic ){
         $('[data-sensorId="sensor-1"]').attr('data-sensorvalue', (payload)).attr('data-sensortopic', (topic));
-        $('[data-sensorval="sensor1"]').html(payload ); 
-        $('[data-sensor="sensor1"]').html(topic);
+        $('[data-sensorval="sensor-1"]').html(payload ); 
+        $('[data-sensor="sensor-1"]').html(topic);
     }else {
         console.log("wrong name");
     }
