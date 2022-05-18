@@ -57,7 +57,7 @@ function onConnectionLost(response) {
 function onMessageArrived(message) {
     let topic = message.destinationName;
     let payload = message.payloadString;
-
+/*
     let userMessageTopic = document.getElementById("hotspottopic").value
     console.log("User input: "+ userMessageTopic);
 
@@ -70,8 +70,8 @@ function onMessageArrived(message) {
 
 
     console.log("Topic: " + topic + ", Message payload: " + payload);
+  */  
     
-    /*
     $('#message').html(topic + ', ' + payload);
     
 	$('#mqtt-topic').text(topic + ':');
@@ -98,7 +98,7 @@ function onMessageArrived(message) {
 	}
 	drawChart(tempData);
 
-    */
+    
  };
 /*
 function drawChart(data) {
