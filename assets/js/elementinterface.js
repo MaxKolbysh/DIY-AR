@@ -158,7 +158,8 @@
 									//element.dataset.sensorval=document.querySelector("option:checked").dataset.sensor;
 									let spanData = document.createElement("span");
 									// value element
-									spanData.innerHTML=document.querySelector("#sensor-1").dataset.sensorvalue;  // before it was with  span data 
+									spanData.dataset.sensorval=viewer.querySelector(".sensor").dataset.sensorid;
+									//spanData.innerHTML=document.querySelector("#sensor-1").dataset.sensorvalue;  // before it was with  span data 
 									spanData.id = `spandata-${hotspotCounter}`;
 									spanData.appendChild(document.createTextNode(inputtext))
 									// name of the unit
