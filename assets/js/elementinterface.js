@@ -1,7 +1,8 @@
 
+
+                                    
 									
-										
-                                        
+									
                                         
                                     const viewer = document.getElementById("modelblock");
 									let hotspotCounter = 0;
@@ -93,18 +94,20 @@
 											const newSensorUnit = document.getElementById("hotspotunit").value;
 											
 											
-											let inputtext =document.querySelector("option:checked").dataset.sensorvalue;
-										
+											//let inputtext =document.querySelector("option:checked").dataset.sensorvalue;  // test data flow for drop down list 
+
+											//new data input integration 
+											let inputtext = document.querySelector("#sensor-1").dataset.sensorValue;
 
 
 											// if input = nothing then alert error if it isnt then add the hotspot
 											if (inputtext == ""){
-										alert("Choose sensor firs, to add on model.");
+										alert("Input sensors topic firs, to add on model.");
 									}else{
 										   
 									const viewer = document.querySelector('#modelblock');
 									const rect = viewer.getBoundingClientRect();
-									
+									// coordinates calculating
 									const x = event.clientX - rect.left;
 									const y = event.clientY - rect.top;
 									const positionAndNormal = viewer.positionAndNormalFromPoint(x, y);
@@ -124,7 +127,7 @@
 									hotspot.dataset.toggle ="modal"						// modal window now sstatic , but foe update
 									hotspot.dataset.target ="#exampleModalCenter"
 
-									hotspot.dataset.sensornumber = document.querySelector("option:checked").dataset.sensor;
+									hotspot.dataset.sensornumber = document.querySelector("option:checked").dataset.sensorid;   // changing from sensor
 									hotspot.dataset.position = position.toString();
 									
 									if (normal != null) {
@@ -139,10 +142,12 @@
 							
 									elementDataContainer.id= `elementdatacontainer-${hotspotCounter}`;
 									elementDataContainer.classList.add("elementdatacontainer");
+									elementDataContainer.dataset.sensorTopic = document.querySelector("#sensor-1").dataset.sensorTopic;
 									document.getElementById(`hotspot-${hotspotCounter}`).appendChild(elementDataContainer);
 									
 									let elementName = document.createElement("div");
 									elementName.classList.add('element-name');
+									
 									elementName.appendChild(document.createTextNode(newsensorname));
 									document.getElementById(`elementdatacontainer-${hotspotCounter}`).appendChild(elementName);
 
@@ -153,10 +158,10 @@
 									//element.dataset.sensorval=document.querySelector("option:checked").dataset.sensor;
 									let spanData = document.createElement("span");
 									// value element
-									spanData.dataset.sensorval=document.querySelector("option:checked").dataset.sensor;
+									spanData.innerHTML=document.querySelector("#sensor-1").dataset.sensorValue;  // before it was with  span data 
 									spanData.id = `spandata-${hotspotCounter}`;
 									spanData.appendChild(document.createTextNode(inputtext))
-									// name of the sensor
+									// name of the unit
 									let spanUnit = document.createElement("span");
 									spanUnit.id=`spanunit-${hotspotCounter}`
 									spanUnit.innerHTML = " "+newSensorUnit;

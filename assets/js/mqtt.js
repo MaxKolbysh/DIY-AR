@@ -57,20 +57,20 @@ function onConnectionLost(response) {
 function onMessageArrived(message) {
     let topic = message.destinationName;
     let payload = message.payloadString;
-/*
+
     let userMessageTopic = document.getElementById("hotspottopic").value
     console.log("User input: "+ userMessageTopic);
 
     if (userMessageTopic == topic ){
-        $('[data-sensorval="sensor1"]').html(payload );
+        $('[data-sensorId="sensor-1"]').attr('data-sensorValue', (payload)).attr('data-sensorTopic', (topic));
 
     }else {
         console.log("wrong name");
     }
 
 
-    console.log("Topic: " + topic + ", Message payload: " + payload);
-  */  
+   
+   
     console.log("Topic: " + topic + ", Message payload: " + payload);
     $('#message').html(topic + ', ' + payload);
     
@@ -89,7 +89,9 @@ function onMessageArrived(message) {
     $('[data-sensorval="sensor1"]').html(payload );
     $('[data-sensorval="sensor2"]').html(payload );
     $('[data-sensorval="sensor3"]').html(payload );
-	tempData.push({
+	
+    /*
+    tempData.push({
 		"timestamp": Date().slice(16, 21),
 		"temperature": parseInt(payload)
 	});
@@ -97,7 +99,7 @@ function onMessageArrived(message) {
 		tempData.shift()
 	}
 	drawChart(tempData);
-
+*/
     
  };
 /*
@@ -135,3 +137,4 @@ $(document).ready(function () {
   /* drawChart(tempData); */ 
     MQTTconnect();
 });
+
