@@ -57,7 +57,7 @@
   #nav-button{
 	position: absolute;
 	top: 28px;
-	left: 28px ;
+	right: 235px ;
 	max-width: 115px;
     transform: unset;
 	text-align: center;

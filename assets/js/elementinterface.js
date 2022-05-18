@@ -246,8 +246,20 @@
 
 										switch (el.value){
 											case "left":
-											viewer.cameraOrbit ="0deg 120deg 50%";
-											break; 	
+											viewer.cameraOrbit ="270deg 80deg 30%";
+											break;
+											case "top":
+											viewer.cameraOrbit ="0deg 0deg 50%";
+											break;
+											case "front":
+											viewer.cameraOrbit ="0deg 80deg 30%";
+											break;
+											case "back":
+											viewer.cameraOrbit ="180deg 80deg 30%";
+											break;
+											case "right":
+											viewer.cameraOrbit ="90deg 80deg 30%";
+											break; 	 	
 										}
 
 									}
