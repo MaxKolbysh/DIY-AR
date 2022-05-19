@@ -112,7 +112,7 @@
 											//let inputtext =document.querySelector("option:checked").dataset.sensorvalue;  // test data flow for drop down list 
 
 											//new data input integration 
-											let inputtext = document.querySelector("#sensor-1").dataset.sensorvalue;
+											let inputtext = document.querySelector(".sensor").dataset.sensorvalue;
 
 
 											
