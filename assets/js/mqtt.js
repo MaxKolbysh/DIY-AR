@@ -46,12 +46,17 @@ function onConnect() {
         .attr('class', 'alert alert-success');
     mqtt.subscribe(topic, { qos: 0 });
     $('#topic').html(topic);
+
+    $("#connection-status").html("Connected").attr('class', 'alert alert-success');  // connection status in menu highlight
+
+
 };
 
 function onConnectionLost(response) {
     setTimeout(MQTTconnect, reconnectTimeout);
     $('#status').html("Connection lost. Reconnecting...")
         .attr('class', 'alert alert-warning');
+    $("#connection-status").html("Connection lost").attr('class', 'alert alert-warning');   // disconnection status in menu highlight 
 };
 
 function onMessageArrived(message) {
@@ -59,7 +64,7 @@ function onMessageArrived(message) {
     let payload = message.payloadString;
 
     let userMessageTopic = document.getElementById("hotspottopic").value
-    console.log("User input: "+ userMessageTopic);
+    
 
     if (userMessageTopic == topic ){
         $('[data-sensorId="sensor-1"]').attr('data-sensorvalue', (payload)).attr('data-sensortopic', (topic));

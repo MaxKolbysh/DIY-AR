@@ -54,6 +54,21 @@
 									});	
 
 
+									// chek click target class
+									let param = {};
+									viewer.addEventListener('click',buttonClick = (e) =>{
+										
+										let newClick = e.target.className;
+										param.buttonControl = newClick
+										console.log(param.buttonControl);
+										
+										
+										 
+									});	
+									console.log('Function result:' + buttonControl);
+									
+									
+
 
 									
 										// Removes the selected hotspot
@@ -100,9 +115,14 @@
 											let inputtext = document.querySelector("#sensor-1").dataset.sensorvalue;
 
 
+											
+
+
 											// if input = nothing then alert error if it isnt then add the hotspot
-											if (inputtext == undefined){
-										alert("Input sensors topic firs, to add on model.");
+
+											if (inputtext == undefined && param.buttonControl!="btn"  ){
+										//alert("Input sensors topic firs, to add on model.");
+										$("#ModalAlert").modal();
 									}else{
 										   
 									const viewer = document.querySelector('#modelblock');
