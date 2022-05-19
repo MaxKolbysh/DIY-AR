@@ -52,6 +52,8 @@ function onConnect() {
 
 };
 
+
+
 function onConnectionLost(response) {
     setTimeout(MQTTconnect, reconnectTimeout);
     $('#status').html("Connection lost. Reconnecting...")
@@ -59,19 +61,28 @@ function onConnectionLost(response) {
     $("#connection-status").html("Connection lost").attr('class', 'alert alert-warning');   // disconnection status in menu highlight 
 };
 
+
+const topicArray = [];   
+topicArray.push(topic);   // array for tests 
+
+
 function onMessageArrived(message) {
     let topic = message.destinationName;
     let payload = message.payloadString;
 
     let userMessageTopic = document.getElementById("hotspottopic").value
     
+    
+    
+    
 
-    if (userMessageTopic == topic ){
+
+    if (topicArray.includes(userMessageTopic) ){
         $('[data-sensorId="sensor-1"]').attr('data-sensorvalue', (payload)).attr('data-sensortopic', (topic));
         $('[data-sensorval="sensor-1"]').html(payload ); 
         $('[data-sensor="sensor-1"]').html(topic);
     }else {
-        console.log("wrong name");
+        console.log("wrong topic name");
     }
 
 
