@@ -65,7 +65,7 @@
 										
 										 
 									});	
-									console.log('Function result:' + buttonControl);
+									
 									
 									
 
