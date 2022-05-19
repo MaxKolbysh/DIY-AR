@@ -120,7 +120,7 @@
 
 											// if input = nothing then alert error if it isnt then add the hotspot
 
-											if (inputtext == undefined && param.buttonControl!="btn"  ){
+											if (inputtext == "..." && param.buttonControl!="btn"  ){
 										//alert("Input sensors topic firs, to add on model.");
 										$("#ModalAlert").modal();
 									}else{
