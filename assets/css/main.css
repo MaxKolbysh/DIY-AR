@@ -67,6 +67,15 @@
 	text-align: center;
   }
 
+  #unit-button{
+	position: absolute;
+	top: 28px;
+	right: 415px ;
+	max-width: 115px;
+    transform: unset;
+	text-align: center;
+  }
+
   
 
 #controls {

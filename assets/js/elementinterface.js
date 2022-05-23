@@ -152,7 +152,7 @@
 									hotspot.id = `hotspot-${hotspotCounter}`;
 									hotspot.dataset.toggle ="modal"						// modal window now sstatic , but foe update
 									hotspot.dataset.target ="#exampleModalCenter"
-
+									hotspot.dataset.unittype = newSensorUnit;
 									hotspot.dataset.sensornumber = viewer.querySelector(".sensor").dataset.sensorid;   // changing from sensor
 									hotspot.dataset.position = position.toString();
 									
