@@ -112,8 +112,10 @@
 											//let inputtext =document.querySelector("option:checked").dataset.sensorvalue;  // test data flow for drop down list 
 
 											//new data input integration 
-											let inputtext = document.querySelector(".sensor").dataset.sensorval;
+											let inputtext = document.querySelector(".sensor");
 
+
+											inputtext= inputtext=="" ? $("#ModalAlert").modal() : inputtext;
 
 											
 
@@ -124,7 +126,7 @@
 										//alert("Input sensors topic firs, to add on model.");
 										$("#ModalAlert").modal();
 									}else{
-										   
+									let = sensorcounter = document.querySelector(".sensor").id	   
 									const viewer = document.querySelector('#modelblock');
 									const rect = viewer.getBoundingClientRect();
 									// coordinates calculating
@@ -162,7 +164,7 @@
 							
 									elementDataContainer.id= `elementdatacontainer-${hotspotCounter}`;
 									elementDataContainer.classList.add("elementdatacontainer");
-									elementDataContainer.dataset.sensorTopic = document.querySelector("#sensor-1").dataset.sensorTopic;
+									elementDataContainer.dataset.sensorTopic = document.querySelector(sensorcounter).dataset.sensorTopic;
 									document.getElementById(`hotspot-${hotspotCounter}`).appendChild(elementDataContainer);
 									
 									let elementName = document.createElement("div");
@@ -181,7 +183,7 @@
 									spanData.dataset.sensorval=viewer.querySelector(".sensor").dataset.sensorid;
 									//spanData.innerHTML=document.querySelector("#sensor-1").dataset.sensorvalue;  // before it was with  span data 
 									spanData.id = `spandata-${hotspotCounter}`;
-									spanData.appendChild(document.createTextNode(inputtext))
+									spanData.appendChild(document.createTextNode(inputtext.dataset.sensorval))
 									// name of the unit
 									let spanUnit = document.createElement("span");
 									spanUnit.id=`spanunit-${hotspotCounter}`

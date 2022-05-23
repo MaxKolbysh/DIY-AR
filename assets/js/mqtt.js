@@ -71,16 +71,23 @@ topicArray.push(topic);   // array for tests
 
 
 $(document).ready(function(){
-    let i =1; 
+    let i =0; 
     $("#hotspottopic").change(function(){
         let userMessageTopic = document.getElementById("hotspottopic").value;
         
         if (topicArray.includes(userMessageTopic) ){
             
             i++;
+           
+           
+           
             $("#sensor-container").prepend(`<option class="sensor"  id="sensor-${i}" data-sensorId="sensor-${i}" data-sensorVal="sensor-${i}"></option>`);
             
-
+              
+            $(`[data-sensorId="sensor-${i}"]`).attr('data-sensortopic', (topic));
+            console.log("data added")
+           
+          
             
         }else {
             console.log("not right name");
@@ -102,7 +109,7 @@ function onMessageArrived(message) {
 
     
     
-    
+    /*
     let userMessageTopic = document.getElementById("hotspottopic").value;
     let lastSensor = document.querySelector(".sensor");
 
@@ -115,7 +122,7 @@ function onMessageArrived(message) {
     }else {
         console.log("wrong topic name");
     }
-
+*/
 
    
    
@@ -150,6 +157,8 @@ function onMessageArrived(message) {
 */
     
  };
+
+ 
 /*
 function drawChart(data) {
     let ctx = document.getElementById("chart").getContext("2d");
