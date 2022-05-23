@@ -164,7 +164,7 @@
 							
 									elementDataContainer.id= `elementdatacontainer-${hotspotCounter}`;
 									elementDataContainer.classList.add("elementdatacontainer");
-									elementDataContainer.dataset.sensorTopic = document.querySelector(sensorcounter).dataset.sensorTopic;
+									elementDataContainer.dataset.sensorTopic = document.querySelector("#"+sensorcounter).dataset.sensorTopic;
 									document.getElementById(`hotspot-${hotspotCounter}`).appendChild(elementDataContainer);
 									
 									let elementName = document.createElement("div");
