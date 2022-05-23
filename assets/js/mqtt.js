@@ -96,8 +96,6 @@ $(document).ready(function(){
 
 
 
-
-
 function onMessageArrived(message) {
     let topic = message.destinationName;
     let payload = message.payloadString;
