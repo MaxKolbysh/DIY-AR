@@ -53,6 +53,10 @@
 	color: #000;
   }
 
+#sensor-container{
+	display: none;
+}  
+
 
   #nav-button{
 	position: absolute;

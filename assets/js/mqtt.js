@@ -62,8 +62,39 @@ function onConnectionLost(response) {
 };
 
 
+
+
+
+
 const topicArray = [];   
 topicArray.push(topic);   // array for tests 
+
+
+$(document).ready(function(){
+    let i =1; 
+    $("#hotspottopic").change(function(){
+        let userMessageTopic = document.getElementById("hotspottopic").value;
+        
+        if (topicArray.includes(userMessageTopic) ){
+            
+            i++;
+            $("#sensor-container").prepend(`<option class="sensor"  id="sensor-${i}" data-sensorId="sensor-${i}"></option>`);
+            
+
+            
+        }else {
+            console.log("not right name");
+        }
+
+
+      
+    });
+  });
+
+
+
+
+
 
 
 
@@ -71,17 +102,18 @@ function onMessageArrived(message) {
     let topic = message.destinationName;
     let payload = message.payloadString;
 
-    let userMessageTopic = document.getElementById("hotspottopic").value
     
     
     
-    
+    let userMessageTopic = document.getElementById("hotspottopic").value;
+    let lastSensor = document.querySelector(".sensor");
 
 
     if (topicArray.includes(userMessageTopic) ){
-        $('[data-sensorId="sensor-1"]').attr('data-sensorvalue', (payload)).attr('data-sensortopic', (topic));
-        $('[data-sensorval="sensor-1"]').html(payload ); 
-        $('[data-sensor="sensor-1"]').html(topic);
+        $(`[data-sensorId="sensor1"]`).attr('data-sensorvalue', (payload)).attr('data-sensortopic', (topic));
+        $(`[data-sensorval="sensor1"]`).html(payload ); 
+        $(`[data-sensor="sensor1"]`).html(topic);
+        
     }else {
         console.log("wrong topic name");
     }
@@ -151,6 +183,10 @@ function drawChart(data) {
     });
 }
 */
+
+   
+
+
 $(document).ready(function () {
   /* drawChart(tempData); */ 
     MQTTconnect();

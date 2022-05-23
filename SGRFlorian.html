@@ -109,7 +109,7 @@
  
 										<div id="controls" class="dim">
 											<label for="src">Input sensors topic:</label>
-											<form >
+											<form onsubmit="return false;"  >
 											
 												<input type="text" id="hotspottopic" name="hotspottopic" placeholder="Input topic">
 												
@@ -128,9 +128,9 @@
 											<label for="src">Sensors list:</label>
 											
 											<select id="src"  name="dropdown" > -->
-
-											  <option class="sensor" data-sensorvalue="..." id="sensor-1" data-sensorId="sensor-1"></option>
-											 
+											<div id="sensor-container">
+											  <option class="sensor"  id="sensor-1" data-sensorId="sensor-1"></option>
+											</div>	 
 										<!--	</select><br>-->
 									
 											
@@ -143,7 +143,7 @@
 												
 											<div class="center">
 												<button class="btn" onclick="myOpenClosemenu()">Hide menu</button>
-												<!--<button class="btn" onclick="addHotspotButton()">Add Hotspot</button> -->
+												<!--<button class="btn" onclick="addHotspotButton()">Add Hotspot</button>-->
 												<button class="btn" onclick="removeHotspotlast()">Remove last Data</button>
 												
 											</div>
@@ -155,6 +155,7 @@
 										</div>
 										
 									</model-viewer>
+									
 
 									
 

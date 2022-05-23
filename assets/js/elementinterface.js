@@ -60,7 +60,7 @@
 										
 										let newClick = e.target.className;
 										param.buttonControl = newClick
-										console.log(param.buttonControl);
+										
 										
 										
 										 
@@ -90,7 +90,7 @@
 
 
 										// function for hotspot button 
-
+										
 
 									
 										//hotspot counter so we can keep track of how many we added on 1 because we already have hotspot-0 and hotspot-1 (set to 0 if you start with 0 hotspots)
@@ -120,7 +120,7 @@
 
 											// if input = nothing then alert error if it isnt then add the hotspot
 
-											if (inputtext == "..." && param.buttonControl!="btn"  ){
+											if (inputtext == undefined && param.buttonControl!="btn"  ){
 										//alert("Input sensors topic firs, to add on model.");
 										$("#ModalAlert").modal();
 									}else{
