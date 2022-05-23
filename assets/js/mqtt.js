@@ -109,7 +109,7 @@ function onMessageArrived(message) {
     let topic = message.destinationName;
     let payload = message.payloadString;
 
-    
+    $(`[data-sensorval="sensor-1"]`).html(payload );
     
     /*
     let userMessageTopic = document.getElementById("hotspottopic").value;

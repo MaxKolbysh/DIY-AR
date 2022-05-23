@@ -44,11 +44,11 @@
 									viewer.addEventListener('click',modalUpdate = (e) =>{
 										
 										let newData = e.target.closest("[data-sensornumber]");
-										
+										let sensorcounter =newData.dataset.sensornumber
 										if (!newData) return;
+										console.log(newData, sensorcounter);
 										
-										
-										topicCardValue.dataset.sensor=newData.dataset.sensornumber; // sensor and sensorval same data
+										topicCardValue.dataset.sensor=document.querySelector("#"+sensorcounter).dataset.sensortopic; // sensor and sensorval same data
 										sensorCardValue.dataset.sensorval=newData.dataset.sensornumber;
 										modalBox.dataset.modalCounterHotspot = newData.id; 
 									});	
