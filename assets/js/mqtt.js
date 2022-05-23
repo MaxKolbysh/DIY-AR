@@ -48,8 +48,9 @@ function MQTTconnect() {
 function onConnect() {
     $('#status').html('Connected to ' + host + ':' + port + path)
         .attr('class', 'alert alert-success');
-    mqtt.subscribe(topic, { qos: 0 });
-    $('#topic').html(topic);
+
+    //mqtt.subscribe(topic, { qos: 0 });
+    
 
     $("#connection-status").html("Connected").attr('class', 'alert alert-success');  // connection status in menu highlight
 
@@ -69,7 +70,7 @@ function onConnectionLost(response) {
 
 
 
-
+let inputArray = [];
 
 
 $(document).ready(function(){
@@ -79,7 +80,9 @@ $(document).ready(function(){
         
         if (topicArray.includes(userMessageTopic) ){
         
-            mqtt.subscribe(userMessageTopic, { qos: 0 });    
+            mqtt.subscribe(userMessageTopic, { qos: 0 });   // ? 
+           inputArray.push(userMessageTopic);
+           console.log(inputArray.length);
             i++;
            
            
@@ -114,7 +117,9 @@ function onMessageArrived(message) {
 
     let lastSensor=document.querySelector(".sensor").id;
 
-    for (let i = 1; i < 4; i++) { 
+    for (let i = 1; i <= (inputArray.length) ; i++) {           // array lengt according quantity of topics , with out validation.
+        
+        
         $(`[data-sensorval="sensor-${i}"]`).html(payload );
       }
     
