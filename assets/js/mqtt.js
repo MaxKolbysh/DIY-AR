@@ -78,7 +78,7 @@ $(document).ready(function(){
         if (topicArray.includes(userMessageTopic) ){
             
             i++;
-            $("#sensor-container").prepend(`<option class="sensor"  id="sensor-${i}" data-sensorId="sensor-${i}"></option>`);
+            $("#sensor-container").prepend(`<option class="sensor"  id="sensor-${i}" data-sensorId="sensor-${i}" data-sensorVal="sensor-${i}"></option>`);
             
 
             
@@ -121,7 +121,7 @@ function onMessageArrived(message) {
    
     console.log("Topic: " + topic + ", Message payload: " + payload);
     $('#message').html(topic + ', ' + payload);
-    
+/*
 	$('#mqtt-topic').text(topic + ':');
 	$('#mqtt-value-label').text(payload + ' °C');
     
@@ -137,7 +137,7 @@ function onMessageArrived(message) {
     $('[data-sensorval="sensor1"]').html(payload );
     $('[data-sensorval="sensor2"]').html(payload );
     $('[data-sensorval="sensor3"]').html(payload );
-	
+	*/
     /*
     tempData.push({
 		"timestamp": Date().slice(16, 21),
