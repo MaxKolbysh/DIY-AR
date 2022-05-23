@@ -41,11 +41,15 @@
 									let modalBox =document.querySelector('[class="modal-content"]');
 									let sensorCardUnit = document.getElementById("sensor-card-unit");
 
+									
+									
 									viewer.addEventListener('click',modalUpdate = (e) =>{
 										
 										let newData = e.target.closest("[data-sensornumber]");
-										let sensorcounter =newData.dataset.sensornumber
 										if (!newData) return;
+										let sensorcounter =newData.dataset.sensornumber;
+
+										
 										console.log(newData, sensorcounter);
 										
 										topicCardValue.innerHTML=document.querySelector("#"+sensorcounter).dataset.sensortopic; // sensor and sensorval same data

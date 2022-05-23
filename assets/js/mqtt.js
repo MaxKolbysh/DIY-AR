@@ -78,7 +78,8 @@ $(document).ready(function(){
         let userMessageTopic = document.getElementById("hotspottopic").value;
         
         if (topicArray.includes(userMessageTopic) ){
-            
+        
+            mqtt.subscribe(userMessageTopic, { qos: 0 });    
             i++;
            
            
@@ -92,7 +93,7 @@ $(document).ready(function(){
           
             
         }else {
-            console.log("not right name");
+            $("#ModalAlert").modal();
         }
 
 
@@ -106,10 +107,17 @@ $(document).ready(function(){
 
 
 function onMessageArrived(message) {
+
+
     let topic = message.destinationName;
     let payload = message.payloadString;
 
-    $(`[data-sensorval="sensor-1"]`).html(payload );
+    let lastSensor=document.querySelector(".sensor").id;
+
+    for (let i = 1; i < 4; i++) { 
+        $(`[data-sensorval="sensor-${i}"]`).html(payload );
+      }
+    
     
     /*
     let userMessageTopic = document.getElementById("hotspottopic").value;
