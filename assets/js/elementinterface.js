@@ -48,7 +48,7 @@
 										if (!newData) return;
 										console.log(newData, sensorcounter);
 										
-										topicCardValue.dataset.sensor=document.querySelector("#"+sensorcounter).dataset.sensortopic; // sensor and sensorval same data
+										topicCardValue.innerHTML=document.querySelector("#"+sensorcounter).dataset.sensortopic; // sensor and sensorval same data
 										sensorCardValue.dataset.sensorval=newData.dataset.sensornumber;
 										modalBox.dataset.modalCounterHotspot = newData.id; 
 									});	
