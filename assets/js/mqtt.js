@@ -84,7 +84,7 @@ $(document).ready(function(){
             $("#sensor-container").prepend(`<option class="sensor"  id="sensor-${i}" data-sensorId="sensor-${i}" data-sensorVal="sensor-${i}"></option>`);
             
               
-            $(`[data-sensorId="sensor-${i}"]`).attr('data-sensortopic', (topic));
+            $(`[data-sensorId="sensor-${i}"]`).attr('data-sensorTopic', (userMessageTopic));
             console.log("data added")
            
           
