@@ -10,6 +10,10 @@ let tempData = new Array();
 let mqtt;
 
 
+const topicArray = [];   
+topicArray.push(topic);   // array for tests diff topics
+
+
 
 
 let cliendId = "mqtt_panel" + parseInt(Math.random() * 100);
@@ -66,8 +70,6 @@ function onConnectionLost(response) {
 
 
 
-const topicArray = [];   
-topicArray.push(topic);   // array for tests 
 
 
 $(document).ready(function(){
@@ -81,10 +83,10 @@ $(document).ready(function(){
            
            
            
-            $("#sensor-container").prepend(`<option class="sensor"  id="sensor-${i}" data-sensorId="sensor-${i}" data-sensorVal="sensor-${i}"></option>`);
+            $("#sensor-container").prepend(`<option class="sensor"  id="sensor-${i}" data-sensorId="sensor-${i}" data-sensorVal="sensor-${i}" data-sensorTopic ="${userMessageTopic}"></option>`);
             
               
-            $(`[data-sensorId="sensor-${i}"]`).attr('data-sensorTopic', (userMessageTopic));
+           
             console.log("data added")
            
           
