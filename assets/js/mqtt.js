@@ -115,9 +115,8 @@ function onMessageArrived(message) {
     let topic = message.destinationName;
     let payload = message.payloadString;
 
-    let lastSensor=document.querySelector(".sensor").id;
 
-    for (let i = 1; i <= (inputArray.length) ; i++) {           // array lengt according quantity of topics , with out validation.
+    for (let i = 1; i <= 5 ; i++) {           // array lengt according quantity of topics , with out validation.
         
         
         $(`[data-sensorval="sensor-${i}"]`).html(payload );

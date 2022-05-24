@@ -95,6 +95,9 @@
 
 										// function for hotspot button 
 										
+										//adding new unitss in list 
+
+										
 
 									
 										//hotspot counter so we can keep track of how many we added on 1 because we already have hotspot-0 and hotspot-1 (set to 0 if you start with 0 hotspots)
