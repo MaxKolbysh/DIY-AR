@@ -206,7 +206,7 @@
 									
 
 									}
-									
+									document.getElementById("hotspottopic").value="";
 									}
 									
 
