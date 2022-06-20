@@ -11,7 +11,8 @@ let mqtt;
 
 
 const topicArray = [];   
-topicArray.push(topic);   // array for tests diff topics
+topicArray.push(topic);
+   // array for tests diff topics
 
 
 
@@ -96,7 +97,8 @@ $(document).ready(function(){
           
             
         }else {
-            $("#ModalAlert").modal();
+            //$("#ModalAlert").modal();
+            console.log("wrong topic name");
         }
 
 

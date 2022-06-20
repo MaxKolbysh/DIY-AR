@@ -64,7 +64,7 @@
 										
 										let newClick = e.target.className;
 										param.buttonControl = newClick
-										
+										console.log(e.target);
 										
 										
 										 
@@ -123,7 +123,7 @@
 
 
 											inputtext= inputtext=="" ? $("#ModalAlert").modal() : inputtext;
-
+											
 											
 
 
@@ -132,6 +132,7 @@
 											if (inputtext == undefined && param.buttonControl!="btn"  ){
 										//alert("Input sensors topic firs, to add on model.");
 										$("#ModalAlert").modal();
+										
 									}else{
 									let = sensorcounter = document.querySelector(".sensor").id	   
 									const viewer = document.querySelector('#modelblock');
@@ -202,9 +203,10 @@
 									
 									document.getElementById("hotspottext").value = "";
 									document.getElementById("hotspotunit").value="";
-
+									
 
 									}
+									
 									}
 									
 
