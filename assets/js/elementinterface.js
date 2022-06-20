@@ -83,7 +83,7 @@
 											
 	
 											if (el == null){
-												alert("No hotspots to delete 2");
+												alert("are you sure? Click delete again");
 											}else{
 												
 										el.remove();
