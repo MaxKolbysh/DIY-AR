@@ -214,36 +214,27 @@
 
 
 
+
+
 									// function for button add hotspot
 									function addHotspotlast(){
 										viewer.addEventListener("click",coordinatesCalculate = (e) =>{
 
 									
 									addHotspot();
-										
-										let newData = e.target
-										console.log(newData);
 
-									const rect = viewer.getBoundingClientRect();
-									// coordinates calculating
-									const x = event.clientX - rect.left;
-									const y = event.clientY - rect.top;
-									const positionAndNormal = viewer.positionAndNormalFromPoint(x, y);
+										
 									
-									// if the model is not clicked return the position in the console
-									if (positionAndNormal == null) {
-									console.log('no hit result: mouse = ', x, ', ', y);
-									viewer.removeEventListener("click", coordinatesCalculate);
-									return;
-									}
-									const {position, normal} = positionAndNormal;
-									console.log('hit result: mouse = ', x, ', ', y, positionAndNormal);
 									viewer.removeEventListener("click", coordinatesCalculate);
 
 									});
 										
 									
 								}
+
+								$(function () {
+									$('[data-toggle="tooltip"]').tooltip()
+								  })
 
 									
 

@@ -44,6 +44,7 @@
 		
 		<!--Bootstrap-->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 		<!--Modal script-->
 		
 		<!-- Mqttp-->
@@ -140,6 +141,11 @@
 										
 									</model-viewer>
 
+
+
+
+									  
+
 									<div id="controls" class="dim">
 										<label for="src">Input sensors topic:</label>
 										<form  autocomplete="off" onsubmit="return false;"  >
@@ -175,7 +181,8 @@
 										<div class="center">
 											<button class="btn btn-light" onclick="myOpenClosemenu()">Hide menu</button>
 											<!--<button class="btn" onclick="addHotspotButton()">Add Hotspot</button>-->
-											<button class="btn btn-light" onclick="addHotspotlast()">Add hotspot</button>
+											<button class="btn btn-info" onclick="addHotspotlast()" data-toggle="tooltip" data-placement="top" title="And then click on model"><i class="bi bi-plus-circle" > </i>  Add hotspot</button>
+											
 											
 										</div>
 										
