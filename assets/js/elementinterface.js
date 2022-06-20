@@ -64,7 +64,7 @@
 										
 										let newClick = e.target.className;
 										param.buttonControl = newClick
-										console.log(e.target);
+										
 										
 										
 										 
@@ -200,6 +200,7 @@
 									element.appendChild(spanData);
 									element.appendChild(spanUnit);
 									document.getElementById(`elementdatacontainer-${hotspotCounter}`).appendChild(element);
+
 									
 									document.getElementById("hotspottext").value = "";
 									document.getElementById("hotspotunit").value="";
@@ -211,9 +212,33 @@
 									
 
 
+									function removeHotspotlast(){
+										viewer.addEventListener("click", coordinatesCalculate());
+
+									}
+
+									function coordinatesCalculate(){
+										console.log("input coordinates")
+
+										const rect = viewer.getBoundingClientRect();
+									// coordinates calculating
+									const x = event.clientX - rect.left;
+									const y = event.clientY - rect.top;
+									const positionAndNormal = viewer.positionAndNormalFromPoint(x, y);
+									
+									// if the model is not clicked return the position in the console
+									if (positionAndNormal == null) {
+									console.log('no hit result: mouse = ', x, ', ', y);
+									return;
+									}
+									const {position, normal} = positionAndNormal;
+									console.log('hit result: mouse = ', x, ', ', y, positionAndNormal);
+									viewer.removeEventListener("click", coordinatesCalculate());
+
+									}
 									
 									
-									
+									/*
 										function removeHotspotlast(){
 										let el = document.getElementById(`hotspot-${hotspotCounter}`);
 										
@@ -223,6 +248,10 @@
 											hotspotCounter --;
 									el.remove()}; // Removes the last added hotspot
 									}
+
+									*/
+								
+
 
 									function myOpenClosemenu() {
 										let x = document.querySelector('[class="dim"]');
